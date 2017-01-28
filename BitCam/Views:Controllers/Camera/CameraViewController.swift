@@ -55,11 +55,11 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
-        contrast.contrast = max(0.3, contrast.contrast + 0.05)
+        contrast.contrast = max(0.3, contrast.contrast - 0.05)
     }
     
     @IBAction func contrastUpButtonPressed(_ sender: UIButton) {
-        contrast.contrast = max(0.3, contrast.contrast - 0.05)
+        contrast.contrast = min(0.6, contrast.contrast + 0.05)
     }
     
     @IBAction func brightnessDownButtonPressed(_ sender: UIButton) {
@@ -67,7 +67,7 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func brightnessUpButtonPressed(_ sender: UIButton) {
-        brightness.brightness = max(0.3, brightness.brightness + 0.05)
+        brightness.brightness = min(0.6, brightness.brightness + 0.05)
     }
     
     
