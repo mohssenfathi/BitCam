@@ -14,6 +14,11 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var mtlView: MTLView!
     @IBOutlet weak var brightnessLabel: UILabel!
     
+    @IBOutlet weak var contrastView: UIView!
+    @IBOutlet weak var brightnessView: UIView!
+    @IBOutlet weak var contrastSlider: UIImageView!
+    @IBOutlet weak var brightnessSlider: UIImageView!
+    
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
     
@@ -23,6 +28,8 @@ class CameraViewController: UIViewController {
     let brightness = Brightness()
     let contrast = Contrast()
     let crop = Crop()
+    
+    let sliderTicLength: CGFloat = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,22 +58,27 @@ class CameraViewController: UIViewController {
         filterGroup += contrast
         
         brightnessLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2.0)
+        brightnessSlider.transform = CGAffineTransform(rotationAngle: 3*CGFloat.pi/2.0)
     }
     
     @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
         contrast.contrast = max(0.3, contrast.contrast + 0.05)
+        contrastSlider.center = CGPoint(x: contrastSlider.center.x - sliderTicLength, y: contrastSlider.center.y)
     }
     
     @IBAction func contrastUpButtonPressed(_ sender: UIButton) {
         contrast.contrast = max(0.3, contrast.contrast - 0.05)
+        contrastSlider.center = CGPoint(x: contrastSlider.center.x + sliderTicLength, y: contrastSlider.center.y)
     }
     
     @IBAction func brightnessDownButtonPressed(_ sender: UIButton) {
         brightness.brightness = max(0.3, brightness.brightness - 0.05)
+        brightnessSlider.center = CGPoint(x: brightnessSlider.center.x, y: brightnessSlider.center.y + sliderTicLength)
     }
     
     @IBAction func brightnessUpButtonPressed(_ sender: UIButton) {
         brightness.brightness = max(0.3, brightness.brightness + 0.05)
+        brightnessSlider.center = CGPoint(x: brightnessSlider.center.x, y: brightnessSlider.center.y - sliderTicLength)
     }
     
 }
