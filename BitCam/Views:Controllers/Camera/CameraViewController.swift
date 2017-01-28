@@ -13,6 +13,7 @@ class CameraViewController: UIViewController {
 
     @IBOutlet weak var mtlView: MTLView!
     @IBOutlet weak var brightnessLabel: UILabel!
+    @IBOutlet weak var captureButton: UIButton!
     
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
@@ -68,5 +69,19 @@ class CameraViewController: UIViewController {
     @IBAction func brightnessUpButtonPressed(_ sender: UIButton) {
         brightness.brightness = max(0.3, brightness.brightness + 0.05)
     }
+    
+    
+    @IBAction func captureButtonPressed(_ sender: UIButton) {
+        
+        camera.takePhoto { (image, error) in
+            guard let image = image, error == nil else {
+                return
+            }
+            
+            BitCamAlbum.sharedInstance.savePhoto(image)
+        }
+        
+    }
+    
     
 }
