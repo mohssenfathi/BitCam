@@ -12,6 +12,8 @@ import MTLImage
 class CameraViewController: UIViewController {
 
     @IBOutlet weak var mtlView: MTLView!
+    @IBOutlet var contrastSilder:UISlider!
+    @IBOutlet var brightnessSlider:UISlider!
     
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
