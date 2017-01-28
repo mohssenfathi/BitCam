@@ -17,12 +17,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MTLImage:
-    :commit: 5cd2cdc81cfb8116ea0280b32efa13dfba192eed
+    :commit: 08c1b2adf8dd24df2a2dcd247decaaa652f3806a
     :git: https://github.com/mohssenfathi/MTLImage/
 
 SPEC CHECKSUMS:
   MTLImage: 863d8fb2b83d1cf39e4942f5db3b4d74af45c4de
 
-PODFILE CHECKSUM: 246b61193c56f26dbee35e18e3722ac1caf474b1
+PODFILE CHECKSUM: 83ed343c05441145763619232931cd5bb63de9bf
 
 COCOAPODS: 1.1.1

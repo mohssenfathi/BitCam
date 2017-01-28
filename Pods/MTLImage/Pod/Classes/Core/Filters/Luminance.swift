@@ -18,19 +18,19 @@ class Luminance: MTLFilter {
     
     var uniforms = LuminanceUniforms()
     
-    var threshold1: Float = 0.2 {
+    public var threshold1: Float = 0.2 {
         didSet { setNeedsUpdate() }
     }
     
-    var threshold2: Float = 0.4 {
+    public var threshold2: Float = 0.4 {
         didSet { setNeedsUpdate() }
     }
     
-    var threshold3: Float = 0.6 {
+    public var threshold3: Float = 0.6 {
         didSet { setNeedsUpdate() }
     }
     
-    var threshold4: Float = 0.8 {
+    public var threshold4: Float = 0.8 {
         didSet { setNeedsUpdate() }
     }
     

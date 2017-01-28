@@ -15,30 +15,35 @@ class CameraViewController: UIViewController {
     
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
+    
+    let luminance = Luminance()
     let pixellate = Pixellate()
+    let haze = Haze()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        mtlView.contentMode = .scaleAspectFit
-        camera --> filterGroup --> mtlView
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setup() {
+        
+        mtlView.contentMode = .scaleAspectFit
+        
+        luminance.threshold1 = 0.27
+        luminance.threshold2 = 0.47
+        luminance.threshold3 = 0.62
+        luminance.threshold4 = 0.74
+        
+        haze.fade = 0.25
+        
+        pixellate.dotRadius = 0.1
+        
+        
+        camera --> filterGroup --> mtlView
+        
+        filterGroup += luminance
+        filterGroup += pixellate
+        filterGroup += haze
     }
-    */
-
+    
 }

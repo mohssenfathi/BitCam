@@ -4,6 +4,7 @@
 target 'BitCam' do
   use_frameworks!
 
-    pod 'MTLImage', :git => 'https://github.com/mohssenfathi/MTLImage/', :branch => 'BitCam'
+  pod 'MTLImage', :git => 'https://github.com/mohssenfathi/MTLImage/', :branch => 'BitCam'
+  #pod 'MTLImage', :path => "/Users/mfathi/Developer/Cocoapods/MTLImage"
 
 end

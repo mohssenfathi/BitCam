@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "844179727B77ECF24C7F35DEADA6E34068298156",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "844179727B77ECF24C7F35DEADA6E34068298156" : 9223372036854775807,
+    "B6D16EC0286B98C9D0C9DAC53DF9953E72018AA5" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A9306F6D-1984-4090-8968-44FAA0DC60F3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "844179727B77ECF24C7F35DEADA6E34068298156" : "BitCam\/",
+    "B6D16EC0286B98C9D0C9DAC53DF9953E72018AA5" : "..\/Cocoapods\/MTLImage"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BitCam",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BitCam.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mohssenfathi\/BitCam.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "844179727B77ECF24C7F35DEADA6E34068298156"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mohssenfathi\/MTLImage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B6D16EC0286B98C9D0C9DAC53DF9953E72018AA5"
+    }
+  ]
+}
