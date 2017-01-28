@@ -15,6 +15,19 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var brightnessLabel: UILabel!
     @IBOutlet weak var captureButton: UIButton!
     
+    @IBOutlet weak var contrastView: UIView!
+    @IBOutlet weak var brightnessView: UIView!
+    @IBOutlet weak var contrastIndicator: UIImageView!
+    @IBOutlet weak var brightnessIndicator: UIImageView!
+    
+    @IBOutlet weak var contrastUpButton: UIButton!
+    @IBOutlet weak var contrastDownButton: UIButton!
+    @IBOutlet weak var brightnessUpButton: UIButton!
+    @IBOutlet weak var brightnessDownButton: UIButton!
+    
+    @IBOutlet weak var brightnessIndicatorConstraint: NSLayoutConstraint!
+    @IBOutlet weak var contrastIndicatorConstraint: NSLayoutConstraint!
+    
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
     
@@ -25,9 +38,23 @@ class CameraViewController: UIViewController {
     let contrast = Contrast()
     let crop = Crop()
     
+    var brightnessIndicatorRange: CGFloat = 100
+    var contrastIndicatorRange: CGFloat = 100
+    var indicatorSteps: Float = 12.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        brightnessIndicatorRange = brightnessDownButton.frame.minY - brightnessUpButton.frame.maxY - 20.0
+        contrastIndicatorRange = contrastUpButton.frame.minX - contrastDownButton.frame.maxX + 20
+        
+        updateContrastIndicator(with: 0.5)
+        updateBrightnessIndicator(with: 0.5)
     }
     
     func setup() {
@@ -52,24 +79,46 @@ class CameraViewController: UIViewController {
         filterGroup += contrast
         
         brightnessLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2.0)
+        brightnessIndicator.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2.0)
     }
     
     @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
-        contrast.contrast = max(0.3, contrast.contrast - 0.05)
+        
+        contrast.contrast = max(0.3, contrast.contrast - 0.6/indicatorSteps)
+        updateContrastIndicator(with: CGFloat(Tools.convert(contrast.contrast, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
     @IBAction func contrastUpButtonPressed(_ sender: UIButton) {
-        contrast.contrast = min(0.6, contrast.contrast + 0.05)
+        
+        contrast.contrast = min(0.6, contrast.contrast + 0.6/indicatorSteps)
+        updateContrastIndicator(with: CGFloat(Tools.convert(contrast.contrast, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
     @IBAction func brightnessDownButtonPressed(_ sender: UIButton) {
-        brightness.brightness = max(0.3, brightness.brightness - 0.05)
+        
+        brightness.brightness = max(0.3, brightness.brightness - 0.6/indicatorSteps)
+        updateBrightnessIndicator(with: CGFloat(Tools.convert(brightness.brightness, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
     @IBAction func brightnessUpButtonPressed(_ sender: UIButton) {
-        brightness.brightness = min(0.6, brightness.brightness + 0.05)
+
+        brightness.brightness = min(0.6, brightness.brightness + 0.6/indicatorSteps)
+        updateBrightnessIndicator(with: CGFloat(Tools.convert(brightness.brightness, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
+    func updateBrightnessIndicator(with percentage: CGFloat) {
+        brightnessIndicatorConstraint.constant = brightnessIndicatorRange * percentage
+    }
+    
+    func updateContrastIndicator(with percentage: CGFloat) {
+        contrastIndicatorConstraint.constant = contrastIndicatorRange * percentage + 4 // Gross, I know
+    }
+    
+    func animate(duration: CGFloat, _ animation: @escaping (() -> ())) {
+        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .beginFromCurrentState, animations: { 
+            animation()
+        }, completion: nil)
+    }
     
     @IBAction func captureButtonPressed(_ sender: UIButton) {
         
