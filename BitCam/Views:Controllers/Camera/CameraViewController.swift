@@ -12,8 +12,6 @@ import MTLImage
 class CameraViewController: UIViewController {
 
     @IBOutlet weak var mtlView: MTLView!
-    @IBOutlet var contrastSilder:UISlider!
-    @IBOutlet var brightnessSlider:UISlider!
     
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
@@ -21,6 +19,9 @@ class CameraViewController: UIViewController {
     let luminance = Luminance()
     let pixellate = Pixellate()
     let haze = Haze()
+    let brightness = Brightness()
+    let contrast = Contrast()
+    let crop = Crop()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +41,21 @@ class CameraViewController: UIViewController {
         
         pixellate.dotRadius = 0.1
         
-        
         camera --> filterGroup --> mtlView
         
         filterGroup += luminance
         filterGroup += pixellate
         filterGroup += haze
+        filterGroup += brightness
+        filterGroup += contrast
+    }
+    
+    @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
+        contrast.contrast -= 0.1
+    }
+    
+    @IBAction func contrastUpButtonPressed(_ sender: UIButton) {
+        contrast.contrast += 0.1
     }
     
 }

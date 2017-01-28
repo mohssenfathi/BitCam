@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454244CD1E3D2DCF00735B59 /* BitCamColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454244CC1E3D2DCF00735B59 /* BitCamColors.swift */; };
+		454244CF1E3D300E00735B59 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454244CE1E3D300E00735B59 /* BorderView.swift */; };
+		454244D31E3D37F000735B59 /* 8bit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 454244D21E3D37F000735B59 /* 8bit.ttf */; };
+		454244D71E3D38F900735B59 /* MarkBit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 454244D61E3D38F900735B59 /* MarkBit.ttf */; };
 		455C99A11E3D1EA0006749EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C99A01E3D1EA0006749EA /* AppDelegate.swift */; };
 		455C99A61E3D1EA0006749EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455C99A41E3D1EA0006749EA /* Main.storyboard */; };
 		455C99A91E3D1EA0006749EA /* BitCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 455C99A71E3D1EA0006749EA /* BitCam.xcdatamodeld */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		2A9EAABCAFD40177393539FC /* Pods_BitCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		454244CC1E3D2DCF00735B59 /* BitCamColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCamColors.swift; sourceTree = "<group>"; };
+		454244CE1E3D300E00735B59 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		454244D21E3D37F000735B59 /* 8bit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8bit.ttf; sourceTree = "<group>"; };
+		454244D61E3D38F900735B59 /* MarkBit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkBit.ttf; sourceTree = "<group>"; };
 		455C999D1E3D1EA0006749EA /* BitCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		455C99A01E3D1EA0006749EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455C99A51E3D1EA0006749EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +58,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		454244CB1E3D2DB700735B59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				454244CC1E3D2DCF00735B59 /* BitCamColors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		454244D01E3D37F000735B59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				454244D11E3D37F000735B59 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		454244D11E3D37F000735B59 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				454244D61E3D38F900735B59 /* MarkBit.ttf */,
+				454244D21E3D37F000735B59 /* 8bit.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		455C99941E3D1EA0006749EA = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +106,7 @@
 			children = (
 				455C99A01E3D1EA0006749EA /* AppDelegate.swift */,
 				455C99A41E3D1EA0006749EA /* Main.storyboard */,
+				454244CB1E3D2DB700735B59 /* Extensions */,
 				455C99B51E3D1EDA006749EA /* Managers */,
 				455C99B61E3D1EDA006749EA /* Model */,
 				455C99B71E3D1EDA006749EA /* Views/Controllers */,
@@ -80,6 +114,7 @@
 				455C99AC1E3D1EA0006749EA /* LaunchScreen.storyboard */,
 				455C99AF1E3D1EA0006749EA /* Info.plist */,
 				455C99A71E3D1EA0006749EA /* BitCam.xcdatamodeld */,
+				454244D01E3D37F000735B59 /* Resources */,
 			);
 			path = BitCam;
 			sourceTree = "<group>";
@@ -111,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				455C99B91E3D2105006749EA /* CameraViewController.swift */,
+				454244CE1E3D300E00735B59 /* BorderView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -190,6 +226,8 @@
 				455C99AE1E3D1EA0006749EA /* LaunchScreen.storyboard in Resources */,
 				455C99AB1E3D1EA0006749EA /* Assets.xcassets in Resources */,
 				455C99A61E3D1EA0006749EA /* Main.storyboard in Resources */,
+				454244D71E3D38F900735B59 /* MarkBit.ttf in Resources */,
+				454244D31E3D37F000735B59 /* 8bit.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +289,8 @@
 				455C99A91E3D1EA0006749EA /* BitCam.xcdatamodeld in Sources */,
 				455C99A11E3D1EA0006749EA /* AppDelegate.swift in Sources */,
 				455C99BA1E3D2105006749EA /* CameraViewController.swift in Sources */,
+				454244CF1E3D300E00735B59 /* BorderView.swift in Sources */,
+				454244CD1E3D2DCF00735B59 /* BitCamColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70E1EF63727F8B57A5CA3DB0 /* Pods-BitCam.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P83X3BG446;
 				INFOPLIST_FILE = BitCam/Info.plist;
@@ -387,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5958C42102352191585DC7F /* Pods-BitCam.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P83X3BG446;
 				INFOPLIST_FILE = BitCam/Info.plist;
