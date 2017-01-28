@@ -11,6 +11,12 @@
 		454244CF1E3D300E00735B59 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454244CE1E3D300E00735B59 /* BorderView.swift */; };
 		454244D31E3D37F000735B59 /* 8bit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 454244D21E3D37F000735B59 /* 8bit.ttf */; };
 		454244D71E3D38F900735B59 /* MarkBit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 454244D61E3D38F900735B59 /* MarkBit.ttf */; };
+		45520D1B1E3D43D7008D0E2E /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45520D1A1E3D43D7008D0E2E /* PhotosManager.swift */; };
+		45520D1D1E3D4400008D0E2E /* BitCamAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45520D1C1E3D4400008D0E2E /* BitCamAlbum.swift */; };
+		45520D221E3D455A008D0E2E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45520D1F1E3D455A008D0E2E /* PhotoCollectionViewCell.swift */; };
+		45520D231E3D455A008D0E2E /* PhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45520D201E3D455A008D0E2E /* PhotoPreviewViewController.swift */; };
+		45520D241E3D455A008D0E2E /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45520D211E3D455A008D0E2E /* PhotosViewController.swift */; };
+		45520D261E3D466E008D0E2E /* MetadataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45520D251E3D466E008D0E2E /* MetadataFormatter.swift */; };
 		455C99A11E3D1EA0006749EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C99A01E3D1EA0006749EA /* AppDelegate.swift */; };
 		455C99A61E3D1EA0006749EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455C99A41E3D1EA0006749EA /* Main.storyboard */; };
 		455C99A91E3D1EA0006749EA /* BitCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 455C99A71E3D1EA0006749EA /* BitCam.xcdatamodeld */; };
@@ -26,6 +32,12 @@
 		454244CE1E3D300E00735B59 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		454244D21E3D37F000735B59 /* 8bit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8bit.ttf; sourceTree = "<group>"; };
 		454244D61E3D38F900735B59 /* MarkBit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MarkBit.ttf; sourceTree = "<group>"; };
+		45520D1A1E3D43D7008D0E2E /* PhotosManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
+		45520D1C1E3D4400008D0E2E /* BitCamAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCamAlbum.swift; sourceTree = "<group>"; };
+		45520D1F1E3D455A008D0E2E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		45520D201E3D455A008D0E2E /* PhotoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPreviewViewController.swift; sourceTree = "<group>"; };
+		45520D211E3D455A008D0E2E /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		45520D251E3D466E008D0E2E /* MetadataFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetadataFormatter.swift; sourceTree = "<group>"; };
 		455C999D1E3D1EA0006749EA /* BitCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		455C99A01E3D1EA0006749EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		455C99A51E3D1EA0006749EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +95,17 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		45520D1E1E3D455A008D0E2E /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				45520D251E3D466E008D0E2E /* MetadataFormatter.swift */,
+				45520D1F1E3D455A008D0E2E /* PhotoCollectionViewCell.swift */,
+				45520D201E3D455A008D0E2E /* PhotoPreviewViewController.swift */,
+				45520D211E3D455A008D0E2E /* PhotosViewController.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		455C99941E3D1EA0006749EA = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,7 @@
 		455C99B51E3D1EDA006749EA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				45520D1A1E3D43D7008D0E2E /* PhotosManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -129,6 +153,7 @@
 		455C99B61E3D1EDA006749EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45520D1C1E3D4400008D0E2E /* BitCamAlbum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +161,7 @@
 		455C99B71E3D1EDA006749EA /* Views/Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45520D1E1E3D455A008D0E2E /* Photos */,
 				455C99B81E3D1EDA006749EA /* Camera */,
 			);
 			name = Views/Controllers;
@@ -195,7 +221,7 @@
 				TargetAttributes = {
 					455C999C1E3D1EA0006749EA = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = NK6A6K3KYZ;
+						DevelopmentTeam = P83X3BG446;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -286,11 +312,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45520D1B1E3D43D7008D0E2E /* PhotosManager.swift in Sources */,
+				45520D221E3D455A008D0E2E /* PhotoCollectionViewCell.swift in Sources */,
 				455C99A91E3D1EA0006749EA /* BitCam.xcdatamodeld in Sources */,
+				45520D261E3D466E008D0E2E /* MetadataFormatter.swift in Sources */,
+				45520D231E3D455A008D0E2E /* PhotoPreviewViewController.swift in Sources */,
 				455C99A11E3D1EA0006749EA /* AppDelegate.swift in Sources */,
 				455C99BA1E3D2105006749EA /* CameraViewController.swift in Sources */,
 				454244CF1E3D300E00735B59 /* BorderView.swift in Sources */,
+				45520D1D1E3D4400008D0E2E /* BitCamAlbum.swift in Sources */,
 				454244CD1E3D2DCF00735B59 /* BitCamColors.swift in Sources */,
+				45520D241E3D455A008D0E2E /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +447,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NK6A6K3KYZ;
+				DEVELOPMENT_TEAM = P83X3BG446;
 				INFOPLIST_FILE = BitCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.BitCam;
@@ -430,7 +462,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NK6A6K3KYZ;
+				DEVELOPMENT_TEAM = P83X3BG446;
 				INFOPLIST_FILE = BitCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.BitCam;

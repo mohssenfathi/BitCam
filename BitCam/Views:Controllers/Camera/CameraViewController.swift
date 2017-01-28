@@ -13,6 +13,7 @@ class CameraViewController: UIViewController {
 
     @IBOutlet weak var mtlView: MTLView!
     @IBOutlet weak var brightnessLabel: UILabel!
+    @IBOutlet weak var captureButton: UIButton!
     
     @IBOutlet weak var contrastView: UIView!
     @IBOutlet weak var brightnessView: UIView!
@@ -80,5 +81,19 @@ class CameraViewController: UIViewController {
         brightness.brightness = max(0.3, brightness.brightness + 0.05)
         brightnessSlider.center = CGPoint(x: brightnessSlider.center.x, y: brightnessSlider.center.y - sliderTicLength)
     }
+    
+    
+    @IBAction func captureButtonPressed(_ sender: UIButton) {
+        
+        camera.takePhoto { (image, error) in
+            guard let image = image, error == nil else {
+                return
+            }
+            
+            BitCamAlbum.sharedInstance.savePhoto(image)
+        }
+        
+    }
+    
     
 }
