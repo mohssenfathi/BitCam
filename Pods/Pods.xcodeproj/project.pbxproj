@@ -1,0 +1,970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01489F6BF38DCECA3923F5754F43EF60 /* HighlightShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F1E5307BE3ACABB6B38B51BBCF29F8 /* HighlightShadow.swift */; };
+		0207DE2BB526465B69E7E565D9DA4C22 /* MTLTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64D89ED3E7417ED640485FD84319B62 /* MTLTypes.swift */; };
+		04850C6DAB63029EE14B93D6B4B7A9F2 /* MTLImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 590EB9DD8E4EAC485CF1660D94A8A9DB /* MTLImage-dummy.m */; };
+		0542DBBEF11CB449689780A8C76FB4C6 /* MTLProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0B6C173BBA59923FBB0E97E2D1D20 /* MTLProperty.swift */; };
+		05615DB820DBD63DE5A1EE7778FBDA51 /* MTLTexture+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA675DE0DBF967052828B82917D240C /* MTLTexture+UIImage.swift */; };
+		07F21369198C8DBA653665E9BF2413CA /* MTLImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 058E5A41A9159E3C049A534C089BE710 /* MTLImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		080052C528BD348BE86726CC180D96F8 /* NonMaximumSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE4B8DB3C4F29D48CCF9A98C419C6B /* NonMaximumSuppression.swift */; };
+		098512AA9CE95BB1B4FC12C2B35EC002 /* Pods-BitCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B14524778DF33E8D94597242297C74E /* Pods-BitCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AC141F5CF0B3DF8E57E42659A83BAFE /* CannyEdgeDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CE1F17320A09554D5BADA6B98B7F1 /* CannyEdgeDetection.swift */; };
+		0B0DF99CD3E660C71260031C28290B17 /* WeakPixelInclusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AD69257317BD0A7DACDAE3FD2839B /* WeakPixelInclusion.swift */; };
+		0B71096F2A5CB6C6B866FAA450228466 /* Distortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5B1A1C74AB247125C2F6A4271EC2A /* Distortion.swift */; };
+		0CAA7E33F64E7187AF4EE9D515BD9DDB /* Haze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD3EC08A7C5088710E36FE18AB18C9A /* Haze.swift */; };
+		0F16E511EADBA5B3A7BED07A723444FB /* XYDerivative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8340DB7ED54733C59FF36C0799CD166F /* XYDerivative.swift */; };
+		0F45ED66F38AC01C0438090089E36769 /* MTLDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB58CF03BBAFE15520EE37BBC3A196 /* MTLDataManager.swift */; };
+		11D55B7BD2D4EEE88727BC198EB40200 /* LuminanceThreshold.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EBE07E5A638799098A4F2ACDE0184 /* LuminanceThreshold.swift */; };
+		222CFF6FC7ABAC805B60C1EC51513E7D /* LensFlare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EAB8FADE0B32A5A1F9FA1885E0969B /* LensFlare.swift */; };
+		232BE2A4FDB68F26ADD5D30B5342700E /* Mosaic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C89E1E0DFB9FEB33DB77D5915FF000 /* Mosaic.swift */; };
+		242D339074081B63E368CF21016475C2 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEAAAD9C1E617ABB7039BF3DCE9DE9E /* images.xcassets */; };
+		2767754F3DD03B7C2F7DB86026BE824F /* BoxBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A0811073A1699D02F1E512CC96BE30 /* BoxBlur.swift */; };
+		2D587AC3ABD633A96BD5DF3C9160BC47 /* MTLMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4A4970358EFF9E4D7D6EE0850276D3 /* MTLMatrix.swift */; };
+		2E20403DBE144CB08005AFA8B5FC48EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A69DC6B88C09526CC39F0741C6FD477 /* Foundation.framework */; };
+		3274F547CFC092839E21BCBD4BC4B081 /* UIImage+MTLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F30D22D5CF5E3B0729EE86B214BF2 /* UIImage+MTLTexture.swift */; };
+		3B98BE7C85CA766DF9813E7E49CC77AC /* Sharpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB74677DF87947DDD7691B919EBB35D /* Sharpen.swift */; };
+		41CF103C80CD0179AFE9E44FA7870ED4 /* SobelEdgeDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF75319158754BC1F3770637A413FA6 /* SobelEdgeDetection.swift */; };
+		458ADF26683CA7D21507CD6B76E03652 /* default.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 72B6B8FE7A296DDEE4190C0C94872E9C /* default.metallib */; };
+		471C25FE8BBF1A610D28ECA47CC716FE /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193E5E9BDA3A80EBF7300AFC733D9895 /* Crop.swift */; };
+		48A2721C23B3C37EDD4FBB47128D6717 /* MTLPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C450726CA42994CCB64C6090FBD66 /* MTLPicture.swift */; };
+		4B7F45558B523D6A5DB00339BCD44077 /* ToneCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801062FD70E091AB9900FD3C54CB20F /* ToneCurve.swift */; };
+		4E66AC45B16C7FD327B71831B391CA69 /* Pixellate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2CB97B7AA4799F0105DCF2DAE867F8 /* Pixellate.swift */; };
+		524B076332F185C89E080E0766EE0FC5 /* Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489338E17A6B205F531F3706D33AC0A4 /* Hue.swift */; };
+		55C847FCA7C16E146BDAA39C4FE566B4 /* MTLView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A311373EA8687D33D8F05307A65B4E /* MTLView1.swift */; };
+		57903AB457877B8B5A27A9902214BAAE /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59927C41E733BBB73EEB3FF7459E4E /* UIImage+Scale.swift */; };
+		57B8FC88E1356815D20EF70F710A6C11 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E65D9603554E4996BECF800FF4A6E5C /* CloudKit.framework */; };
+		57F444E807E4B9FDC7E39B1DF331EC56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A69DC6B88C09526CC39F0741C6FD477 /* Foundation.framework */; };
+		5C0317C757B03D0F3B8F670D1DDFD9A4 /* MTLFilterGroupRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4658349C86E36A862B02965DFB8F4EF2 /* MTLFilterGroupRecord+CoreDataProperties.swift */; };
+		61B7D39403125C43208B835B4921B367 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D124633635C67774B5FEF05490A3A52 /* Water.swift */; };
+		663080964D5728E1A50B9D6AAA72A457 /* MTLImage.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 04CE3C02890598A956D8818537AE1CE9 /* MTLImage.xcdatamodeld */; };
+		6B960C23AB7C9A9070A0148C1EEF4FF9 /* Scatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA1543F8E3CE81729FE0BF65DB1A9E /* Scatter.swift */; };
+		6C501043EB46BD7905C504F06AD497F4 /* SelectiveHSL1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EFF0B9BC9CDA961D0585318EB0F20 /* SelectiveHSL1.swift */; };
+		70A89A1A8CA52FE83EF667690FBF6795 /* MTLBufferProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE3D67148A8D1E1F0B96D71335C7B3D /* MTLBufferProvider.swift */; };
+		78175CA80A4A643D7B23591792B15D01 /* MTLFilterRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A60CCC99CC4A8F9FD6D99C9E81559C2 /* MTLFilterRecord.swift */; };
+		7B86648EFF625925CCD18F66DEE1C5C9 /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57F59F9158B239CAC85E015B50D7B9 /* Buffer.swift */; };
+		7BE8E4409F94AF36B81229D88066495D /* Exposure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3B0DF89FCADDB73A722E87283DFCAC /* Exposure.swift */; };
+		7E76B0CDF3BCFC8C67504EDFD2E948D5 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F75C7AB4CC46285F5777CB279D94A5 /* Tools.swift */; };
+		7F02433EFD41EE1950C23EE923A69225 /* MTLPropertyRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05DC363511242B1C78B6C0C2A1E0FB /* MTLPropertyRecord+CoreDataProperties.swift */; };
+		80E064A2FABC9C1806200671770E9C38 /* Invert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB858E51D4D5BD8B955D25318BAF36D /* Invert.swift */; };
+		838CD206EA10FA37F3C8CF90C937ED69 /* Vignette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A385091C69BA04AF6114FAA657E00C7D /* Vignette.swift */; };
+		841847805100031C04475E5D4FAA497A /* Toon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685C7FCD98E1B12BC9319C86DCF4290 /* Toon.swift */; };
+		86A0625C59ACF36DE8EABE5565FA8CB8 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C47718D3CCB25725585AE743350203 /* Levels.swift */; };
+		8BCB43B0ACDAA42981420134F9886AE0 /* CrossHatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15538676065F8251F3C8858AE3DDCA /* CrossHatch.swift */; };
+		8D825F8FEBB2CA02434AF6207DD5A9E5 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5EA41E2A94DD716B0AC0E4E92094F6 /* Mask.swift */; };
+		8DF115150398424ED5102EDB4E707622 /* UnsharpMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836F9B3C5F95F96154E87D886657311E /* UnsharpMask.swift */; };
+		91BC9D46C6FFFB5CA35DA98B054F1023 /* ColorSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E27ED8870D87778F9131D45B21192B2 /* ColorSelection.swift */; };
+		951E9BD2F693AA595004C655C93AFB9E /* Mask1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C1877C911FEA9C9CCCE38C38A89DCB /* Mask1.swift */; };
+		9852FE98DD27C9D98A78B71DEBC6A004 /* MTLMPSFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ACD10C7F93495E78BF10A3C263D1F5 /* MTLMPSFilter.swift */; };
+		994B6A3F384A88802674359D3062265C /* MTLContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9B79553D7FE2DC4E02DED5C303C6B /* MTLContext.swift */; };
+		996E30CD76B13C17EE803203E493D737 /* Sketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4284BE98D68DCB5181AB9835AF780C5 /* Sketch.swift */; };
+		9AEB283B9E953A50EEC5941168CC9663 /* Dilate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3592ECA6092DCD9A85E29FE80C38BE22 /* Dilate.swift */; };
+		9CADC5FADB6EF85148408ECF3822065D /* OilPaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D323B046FA564886C4082C777377D6A /* OilPaint.swift */; };
+		9EFF67D8AC48242098E4C45C2019BA85 /* HarrisCornerDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABB9BC1ABBA5A316511D3D29F5B04C /* HarrisCornerDetection.swift */; };
+		9F527A516DA026DE0C3D8588B925C4DB /* WhiteBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313BE2AA3CD251A3AFE477ED8B290A2 /* WhiteBalance.swift */; };
+		A30156AA1AFDE4E3E2040233333AAE74 /* Histogram1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD20388D54532861728482FB15ABD78 /* Histogram1.swift */; };
+		A42BC5F7377F06CE313755C665F3A9B2 /* Luminance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60769C28564A0DE1119B2768FFE50BC /* Luminance.swift */; };
+		A497439562FBD2480186C1741667B05B /* MTLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B09E055916E39E332F49F5CB07C4D /* MTLImage.swift */; };
+		A7DD5B4C7B5153BBDF02E5DC3F5A73B7 /* PolkaDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54470721B4DC66CB60CCCD9C23F53B /* PolkaDot.swift */; };
+		A8587EBBFE745C6626E184559BF5A5D1 /* Convolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D468154C85D638CD28CA1D09C33CD /* Convolution.swift */; };
+		A86B7C9383E2923B5C460892AB034F02 /* Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF91C3FC5A1760195066B6163E03915 /* Contrast.swift */; };
+		A8CF2C2A8B6AB5FB1084126C070EE178 /* MTLObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174CE301C80E1A429741D315506CF52 /* MTLObject.swift */; };
+		AAF1CD6DE12CDA2D1ECE565CFB3906F1 /* SobelEdgeDetectionThreshold.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B339A0A0A0BE5F1F90AD5B2F173526 /* SobelEdgeDetectionThreshold.swift */; };
+		B058B034C9ED6E4281EDF1DCA39CD81C /* Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA7E0729244A9B91BD9A2D3ACB095D9 /* Blend.swift */; };
+		B5CD3D6118EF7768CC22B0233FC3BBDF /* MTLFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F339E5D049EAAF2AA8F0C3911BF4FE0 /* MTLFilter.swift */; };
+		B6C770372426EA3A353AB040FE990433 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D84D5B99615A7FEDAC855CAD37E8 /* Annotation.swift */; };
+		B89B5EB488518EDCEBB34BFABDF7B665 /* Voronoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDABEF59CE808C36403E43B2D93B4F6 /* Voronoi.swift */; };
+		BA67149354C7ED3C8BC094CE8A5BE318 /* MTLFilterGroupRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD816BD5055AFEC0A68693FF31EC9A8A /* MTLFilterGroupRecord.swift */; };
+		BCB76278496D27D5CAD76D3CA7A8DB8E /* GaussianBlur1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AF13682A6EC8B2981EB08B4CDA4097 /* GaussianBlur1.swift */; };
+		C149C02C72C1670B160BEEF6696500DC /* Smudge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4A4FA9428F6F47A6D796B67B79058 /* Smudge.swift */; };
+		C3F063FF29F214FEB15B4A535728FCB1 /* MTLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11EEB407476A2D273DC1D5A7DEECC3E /* MTLView.swift */; };
+		C5324BE6BF52BB998AF2DB4EFB2A2BF1 /* Straighten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0061604F74FFABC8FD94AE31F304DA11 /* Straighten.swift */; };
+		C7B018869269DB90645A9211C2701763 /* Saturation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B76D34353CE8CB61C68FFA855E0874 /* Saturation.swift */; };
+		C98CD1A0345F72CD6DF323907113A10D /* MTLLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A59528EC5D763A9EE50FFF51EED7C /* MTLLib.swift */; };
+		CD82D3FAD8B2EA3AE485BC84FDF51678 /* LanczosScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4FD86B0054AC72505F4B108D80764 /* LanczosScale.swift */; };
+		CF08BF7882ECB705BA55F337F3FFE99E /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D23167B005C479F6A7C9C3224EF3B /* Template.swift */; };
+		D318571F88A85482B462063EDE2FECC0 /* MTLPropertyRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D29E0E52AD42D737D16965F821598 /* MTLPropertyRecord.swift */; };
+		D81C6D0E5AB8CD623C7987B69B59BC55 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17AE2598FE86FA8E70426BD087EB3DA /* Transform.swift */; };
+		D8D6CC95FC368071BA5C2995E93CDBB5 /* HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686441993980E13C6110EB6EF31428B /* HSV.swift */; };
+		D9A4ADDB587A27CFC8F26E25FE8A96E1 /* Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65468BD9169FD7C5F540E3FA5750856 /* Brightness.swift */; };
+		DA39B6E6F072C8856F16637582083390 /* LineDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2D97C03FB64DA671B5A2F0B2034370 /* LineDetection.swift */; };
+		DA66CDFE1B0BBE3228FF12F1D4C6B299 /* HoughLineDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC43F98DC1E6EC3E64993A3181FC33 /* HoughLineDetection.swift */; };
+		DAE49E808D78A4D6354DAC9451E8A611 /* Kuwahara.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC04B30729F957A4CDE50CEC2096B8 /* Kuwahara.swift */; };
+		DC8D2BFF196C05938AB37AE4C640B604 /* Pods-BitCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446C4B130990C66F6CFB12BFBD2257 /* Pods-BitCam-dummy.m */; };
+		DEDF091E0647EDFE4540F315081827FB /* GaussianBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E018737908BB6EB7BFA92FA3F6EE8 /* GaussianBlur.swift */; };
+		E1730EBE0CF50E82E8C93291C54AF7AC /* MTLFilterRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F672CC89501445304A9D42A399554 /* MTLFilterRecord+CoreDataProperties.swift */; };
+		E4B22CBDDEB7819D0BD856276A8754E2 /* Tent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DB5A7B2BC5F0F817409C72E46E9F6 /* Tent.swift */; };
+		E4FB13E19822E86A5634B38DB0D286AB /* MTLCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330F6A0D2DA4C2FD1ECEA4FD691F87F /* MTLCamera.swift */; };
+		E795F50E71082E0EB72F6A2C822BC06B /* MTLFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C99E391CD9393DE85ADDEE3F67A8F3 /* MTLFilterGroup.swift */; };
+		EC12248CE18D8937E1B0BCF1A900B99A /* default.metallib in Resources */ = {isa = PBXBuildFile; fileRef = ADFE59977993E5928B00DF1D18F65ECE /* default.metallib */; };
+		EE85CFA89D2046B7CDB422315C074205 /* PerlinNoise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B694323811673EC2FD420B042B81E4 /* PerlinNoise.swift */; };
+		F0A5055964A020A135D3586C39FD15EA /* MTLCloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA19E85855324A97F291F218BD126E2 /* MTLCloudKitManager.swift */; };
+		F293FC6EBEEAB4592DB4016A48745A7D /* Histogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8B1900FC6B0977FC337BAEA7C8985 /* Histogram.swift */; };
+		F7FA429C9F43D02D1F781E1A9CC70B1A /* Crop2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A354FB53A614F4C222CA35F260307B8F /* Crop2.swift */; };
+		FA9EF436805AB6F6AC33C0638AC73414 /* SelectiveHSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539E331B442502289740CE202F44719 /* SelectiveHSL.swift */; };
+		FED998466EAD40A730BA5C9FA5264572 /* Emboss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1BC8485D2B82D9D379D7FB8C8EAED6 /* Emboss.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C25ED5035FAAB745761144055564FDA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A92035F7449C14E36196394B6DCA812F;
+			remoteInfo = MTLImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0061604F74FFABC8FD94AE31F304DA11 /* Straighten.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Straighten.swift; path = Pod/Classes/Core/Filters/Straighten.swift; sourceTree = "<group>"; };
+		00C47718D3CCB25725585AE743350203 /* Levels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Levels.swift; path = Pod/Classes/Core/Filters/Levels.swift; sourceTree = "<group>"; };
+		00C99E391CD9393DE85ADDEE3F67A8F3 /* MTLFilterGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLFilterGroup.swift; path = Pod/Classes/Core/MTLImage/MTLFilterGroup.swift; sourceTree = "<group>"; };
+		03C89E1E0DFB9FEB33DB77D5915FF000 /* Mosaic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mosaic.swift; path = Pod/Classes/Core/Filters/Mosaic.swift; sourceTree = "<group>"; };
+		058E5A41A9159E3C049A534C089BE710 /* MTLImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTLImage-umbrella.h"; sourceTree = "<group>"; };
+		07ABB9BC1ABBA5A316511D3D29F5B04C /* HarrisCornerDetection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HarrisCornerDetection.swift; path = Pod/Classes/Core/Filters/HarrisCornerDetection.swift; sourceTree = "<group>"; };
+		0A670E58967B775FCBC6C2C398567A9B /* Pods-BitCam-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BitCam-frameworks.sh"; sourceTree = "<group>"; };
+		0A69DC6B88C09526CC39F0741C6FD477 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0B0CE1F17320A09554D5BADA6B98B7F1 /* CannyEdgeDetection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CannyEdgeDetection.swift; path = Pod/Classes/Core/Filters/CannyEdgeDetection.swift; sourceTree = "<group>"; };
+		0B1929AF79075C5DB1A11B697009F7B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CEAAAD9C1E617ABB7039BF3DCE9DE9E /* images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = Pod/Assets/images.xcassets; sourceTree = "<group>"; };
+		171A3EC2E236B4ACA4F088AD64044986 /* MTLImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MTLImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		193E5E9BDA3A80EBF7300AFC733D9895 /* Crop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crop.swift; path = Pod/Classes/Core/Filters/Crop.swift; sourceTree = "<group>"; };
+		1D446C4B130990C66F6CFB12BFBD2257 /* Pods-BitCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BitCam-dummy.m"; sourceTree = "<group>"; };
+		1FA19E85855324A97F291F218BD126E2 /* MTLCloudKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLCloudKitManager.swift; path = Pod/Classes/CloudKit/MTLCloudKitManager.swift; sourceTree = "<group>"; };
+		2CDABEF59CE808C36403E43B2D93B4F6 /* Voronoi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Voronoi.swift; path = Pod/Classes/Core/Filters/Voronoi.swift; sourceTree = "<group>"; };
+		3592ECA6092DCD9A85E29FE80C38BE22 /* Dilate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dilate.swift; path = Pod/Classes/Core/Filters/Dilate.swift; sourceTree = "<group>"; };
+		3685C7FCD98E1B12BC9319C86DCF4290 /* Toon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toon.swift; path = Pod/Classes/Core/Filters/Toon.swift; sourceTree = "<group>"; };
+		3801062FD70E091AB9900FD3C54CB20F /* ToneCurve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToneCurve.swift; path = Pod/Classes/Core/Filters/ToneCurve.swift; sourceTree = "<group>"; };
+		3BFBF8F7D6BFD0DAD594C2BF1B599C96 /* Pods_BitCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D4A4FA9428F6F47A6D796B67B79058 /* Smudge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Smudge.swift; path = Pod/Classes/Core/Filters/Smudge.swift; sourceTree = "<group>"; };
+		4384A6C6F9E16C6F0D78C0744CBD0E51 /* Pods-BitCam-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BitCam-resources.sh"; sourceTree = "<group>"; };
+		4658349C86E36A862B02965DFB8F4EF2 /* MTLFilterGroupRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MTLFilterGroupRecord+CoreDataProperties.swift"; path = "Pod/Classes/CoreData/FilterGroupRecord/MTLFilterGroupRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		489338E17A6B205F531F3706D33AC0A4 /* Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hue.swift; path = Pod/Classes/Core/Filters/Hue.swift; sourceTree = "<group>"; };
+		4AD20388D54532861728482FB15ABD78 /* Histogram1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Histogram1.swift; path = Pod/Classes/Core/Filters/Histogram1.swift; sourceTree = "<group>"; };
+		4DE48AE4B38BE34E26C422CF8F3502F6 /* MTLImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTLImage-prefix.pch"; sourceTree = "<group>"; };
+		4E2F26555B320FC650F66D7875D16316 /* Pods-BitCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BitCam.release.xcconfig"; sourceTree = "<group>"; };
+		4EB74677DF87947DDD7691B919EBB35D /* Sharpen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sharpen.swift; path = Pod/Classes/Core/Filters/Sharpen.swift; sourceTree = "<group>"; };
+		5174CE301C80E1A429741D315506CF52 /* MTLObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLObject.swift; path = Pod/Classes/Core/MTLImage/MTLObject.swift; sourceTree = "<group>"; };
+		51EAB8FADE0B32A5A1F9FA1885E0969B /* LensFlare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LensFlare.swift; path = Pod/Classes/Core/Filters/LensFlare.swift; sourceTree = "<group>"; };
+		52C1877C911FEA9C9CCCE38C38A89DCB /* Mask1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask1.swift; path = Pod/Classes/Core/Filters/Mask1.swift; sourceTree = "<group>"; };
+		5539E331B442502289740CE202F44719 /* SelectiveHSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectiveHSL.swift; path = Pod/Classes/Core/Filters/SelectiveHSL.swift; sourceTree = "<group>"; };
+		590EB9DD8E4EAC485CF1660D94A8A9DB /* MTLImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MTLImage-dummy.m"; sourceTree = "<group>"; };
+		5A60CCC99CC4A8F9FD6D99C9E81559C2 /* MTLFilterRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLFilterRecord.swift; path = Pod/Classes/CoreData/FilterRecord/MTLFilterRecord.swift; sourceTree = "<group>"; };
+		5B14524778DF33E8D94597242297C74E /* Pods-BitCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BitCam-umbrella.h"; sourceTree = "<group>"; };
+		5BF75319158754BC1F3770637A413FA6 /* SobelEdgeDetection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SobelEdgeDetection.swift; path = Pod/Classes/Core/Filters/SobelEdgeDetection.swift; sourceTree = "<group>"; };
+		5E65D9603554E4996BECF800FF4A6E5C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		64A0811073A1699D02F1E512CC96BE30 /* BoxBlur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoxBlur.swift; path = Pod/Classes/Core/Filters/BoxBlur.swift; sourceTree = "<group>"; };
+		6BA0B6C173BBA59923FBB0E97E2D1D20 /* MTLProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLProperty.swift; path = Pod/Classes/Core/MTLImage/MTLProperty.swift; sourceTree = "<group>"; };
+		6D124633635C67774B5FEF05490A3A52 /* Water.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Water.swift; path = Pod/Classes/Core/Filters/Water.swift; sourceTree = "<group>"; };
+		6D323B046FA564886C4082C777377D6A /* OilPaint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OilPaint.swift; path = Pod/Classes/Core/Filters/OilPaint.swift; sourceTree = "<group>"; };
+		6E5EA41E2A94DD716B0AC0E4E92094F6 /* Mask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = Pod/Classes/Core/Filters/Mask.swift; sourceTree = "<group>"; };
+		72B6B8FE7A296DDEE4190C0C94872E9C /* default.metallib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "archive.metal-library"; name = default.metallib; path = Pod/Classes/Core/default.metallib; sourceTree = "<group>"; };
+		7330F6A0D2DA4C2FD1ECEA4FD691F87F /* MTLCamera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLCamera.swift; path = Pod/Classes/Core/MTLImage/MTLCamera.swift; sourceTree = "<group>"; };
+		75BE7562D01306C29792794AA374CF56 /* MTLImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MTLImage.xcconfig; sourceTree = "<group>"; };
+		789B09E055916E39E332F49F5CB07C4D /* MTLImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLImage.swift; path = Pod/Classes/Core/MTLImage/MTLImage.swift; sourceTree = "<group>"; };
+		7A4A4970358EFF9E4D7D6EE0850276D3 /* MTLMatrix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLMatrix.swift; path = Pod/Classes/Core/MTLImage/MTLMatrix.swift; sourceTree = "<group>"; };
+		7AA7E0729244A9B91BD9A2D3ACB095D9 /* Blend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blend.swift; path = Pod/Classes/Core/Filters/Blend.swift; sourceTree = "<group>"; };
+		7CD3EC08A7C5088710E36FE18AB18C9A /* Haze.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haze.swift; path = Pod/Classes/Core/Filters/Haze.swift; sourceTree = "<group>"; };
+		7D09607F2189CB13F8ACD5DCC3A2F6A3 /* MTLImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MTLImage.modulemap; sourceTree = "<group>"; };
+		7D54470721B4DC66CB60CCCD9C23F53B /* PolkaDot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolkaDot.swift; path = Pod/Classes/Core/Filters/PolkaDot.swift; sourceTree = "<group>"; };
+		7F339E5D049EAAF2AA8F0C3911BF4FE0 /* MTLFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLFilter.swift; path = Pod/Classes/Core/MTLImage/MTLFilter.swift; sourceTree = "<group>"; };
+		7FF91C3FC5A1760195066B6163E03915 /* Contrast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contrast.swift; path = Pod/Classes/Core/Filters/Contrast.swift; sourceTree = "<group>"; };
+		81F1E5307BE3ACABB6B38B51BBCF29F8 /* HighlightShadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HighlightShadow.swift; path = Pod/Classes/Core/Filters/HighlightShadow.swift; sourceTree = "<group>"; };
+		8340DB7ED54733C59FF36C0799CD166F /* XYDerivative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XYDerivative.swift; path = Pod/Classes/Core/Filters/XYDerivative.swift; sourceTree = "<group>"; };
+		836F9B3C5F95F96154E87D886657311E /* UnsharpMask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnsharpMask.swift; path = Pod/Classes/Core/Filters/UnsharpMask.swift; sourceTree = "<group>"; };
+		837EFF0B9BC9CDA961D0585318EB0F20 /* SelectiveHSL1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectiveHSL1.swift; path = Pod/Classes/Core/Filters/SelectiveHSL1.swift; sourceTree = "<group>"; };
+		85392E66625821A8FA0249B6ED1244A6 /* Pods-BitCam-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BitCam-acknowledgements.markdown"; sourceTree = "<group>"; };
+		86ACD10C7F93495E78BF10A3C263D1F5 /* MTLMPSFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLMPSFilter.swift; path = Pod/Classes/Core/MTLImage/MTLMPSFilter.swift; sourceTree = "<group>"; };
+		8A7B7DCC39E4146151CEEF8C27EDB804 /* MTLImage.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = MTLImage.xcdatamodel; sourceTree = "<group>"; };
+		8D05DC363511242B1C78B6C0C2A1E0FB /* MTLPropertyRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MTLPropertyRecord+CoreDataProperties.swift"; path = "Pod/Classes/CoreData/PropertyRecord/MTLPropertyRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E27ED8870D87778F9131D45B21192B2 /* ColorSelection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorSelection.swift; path = Pod/Classes/Core/Filters/ColorSelection.swift; sourceTree = "<group>"; };
+		8F1BC8485D2B82D9D379D7FB8C8EAED6 /* Emboss.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emboss.swift; path = Pod/Classes/Core/Filters/Emboss.swift; sourceTree = "<group>"; };
+		91CE4B8DB3C4F29D48CCF9A98C419C6B /* NonMaximumSuppression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NonMaximumSuppression.swift; path = Pod/Classes/Core/Filters/NonMaximumSuppression.swift; sourceTree = "<group>"; };
+		929E018737908BB6EB7BFA92FA3F6EE8 /* GaussianBlur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaussianBlur.swift; path = Pod/Classes/Core/Filters/GaussianBlur.swift; sourceTree = "<group>"; };
+		92B694323811673EC2FD420B042B81E4 /* PerlinNoise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerlinNoise.swift; path = Pod/Classes/Core/Filters/PerlinNoise.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		953DB5A7B2BC5F0F817409C72E46E9F6 /* Tent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tent.swift; path = Pod/Classes/Core/Filters/Tent.swift; sourceTree = "<group>"; };
+		9E59927C41E733BBB73EEB3FF7459E4E /* UIImage+Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Scale.swift"; path = "Pod/Classes/Core/Tools/UIImage+Scale.swift"; sourceTree = "<group>"; };
+		A11EEB407476A2D273DC1D5A7DEECC3E /* MTLView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLView.swift; path = Pod/Classes/Core/MTLImage/MTLView.swift; sourceTree = "<group>"; };
+		A354FB53A614F4C222CA35F260307B8F /* Crop2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crop2.swift; path = Pod/Classes/Core/Filters/Crop2.swift; sourceTree = "<group>"; };
+		A385091C69BA04AF6114FAA657E00C7D /* Vignette.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vignette.swift; path = Pod/Classes/Core/Filters/Vignette.swift; sourceTree = "<group>"; };
+		A58D23167B005C479F6A7C9C3224EF3B /* Template.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Template.swift; path = Pod/Classes/Core/Filters/Template.swift; sourceTree = "<group>"; };
+		A64D89ED3E7417ED640485FD84319B62 /* MTLTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLTypes.swift; path = Pod/Classes/Core/MTLImage/MTLTypes.swift; sourceTree = "<group>"; };
+		A6C5B1A1C74AB247125C2F6A4271EC2A /* Distortion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distortion.swift; path = Pod/Classes/Core/Filters/Distortion.swift; sourceTree = "<group>"; };
+		A83F30D22D5CF5E3B0729EE86B214BF2 /* UIImage+MTLTexture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+MTLTexture.swift"; path = "Pod/Classes/Core/Tools/UIImage+MTLTexture.swift"; sourceTree = "<group>"; };
+		A9B76D34353CE8CB61C68FFA855E0874 /* Saturation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Saturation.swift; path = Pod/Classes/Core/Filters/Saturation.swift; sourceTree = "<group>"; };
+		ADFE59977993E5928B00DF1D18F65ECE /* default.metallib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "archive.metal-library"; name = default.metallib; path = Pod/Classes/Core/Shaders/default.metallib; sourceTree = "<group>"; };
+		AF15538676065F8251F3C8858AE3DDCA /* CrossHatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossHatch.swift; path = Pod/Classes/Core/Filters/CrossHatch.swift; sourceTree = "<group>"; };
+		B03C450726CA42994CCB64C6090FBD66 /* MTLPicture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLPicture.swift; path = Pod/Classes/Core/MTLImage/MTLPicture.swift; sourceTree = "<group>"; };
+		B17AE2598FE86FA8E70426BD087EB3DA /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Pod/Classes/Core/Filters/Transform.swift; sourceTree = "<group>"; };
+		B379D16216CC2AA44F0A92B6BB4185C1 /* Pods-BitCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BitCam.debug.xcconfig"; sourceTree = "<group>"; };
+		B64AD69257317BD0A7DACDAE3FD2839B /* WeakPixelInclusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakPixelInclusion.swift; path = Pod/Classes/Core/Filters/WeakPixelInclusion.swift; sourceTree = "<group>"; };
+		B6F1104D68769C222A67E5FEE4F91457 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB57F59F9158B239CAC85E015B50D7B9 /* Buffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Buffer.swift; path = Pod/Classes/Core/Filters/Buffer.swift; sourceTree = "<group>"; };
+		BD2CB97B7AA4799F0105DCF2DAE867F8 /* Pixellate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pixellate.swift; path = Pod/Classes/Core/Filters/Pixellate.swift; sourceTree = "<group>"; };
+		BD3B0DF89FCADDB73A722E87283DFCAC /* Exposure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exposure.swift; path = Pod/Classes/Core/Filters/Exposure.swift; sourceTree = "<group>"; };
+		BD816BD5055AFEC0A68693FF31EC9A8A /* MTLFilterGroupRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLFilterGroupRecord.swift; path = Pod/Classes/CoreData/FilterGroupRecord/MTLFilterGroupRecord.swift; sourceTree = "<group>"; };
+		BEDB58CF03BBAFE15520EE37BBC3A196 /* MTLDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLDataManager.swift; path = Pod/Classes/Core/MTLImage/MTLDataManager.swift; sourceTree = "<group>"; };
+		C313BE2AA3CD251A3AFE477ED8B290A2 /* WhiteBalance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhiteBalance.swift; path = Pod/Classes/Core/Filters/WhiteBalance.swift; sourceTree = "<group>"; };
+		C50D29E0E52AD42D737D16965F821598 /* MTLPropertyRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLPropertyRecord.swift; path = Pod/Classes/CoreData/PropertyRecord/MTLPropertyRecord.swift; sourceTree = "<group>"; };
+		C66D468154C85D638CD28CA1D09C33CD /* Convolution.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Convolution.swift; path = Pod/Classes/Core/Filters/Convolution.swift; sourceTree = "<group>"; };
+		C6B339A0A0A0BE5F1F90AD5B2F173526 /* SobelEdgeDetectionThreshold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SobelEdgeDetectionThreshold.swift; path = Pod/Classes/Core/Filters/SobelEdgeDetectionThreshold.swift; sourceTree = "<group>"; };
+		CA2D97C03FB64DA671B5A2F0B2034370 /* LineDetection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineDetection.swift; path = Pod/Classes/Core/Filters/LineDetection.swift; sourceTree = "<group>"; };
+		CDC0938DD077AA476B78B6D30878E18D /* Pods-BitCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BitCam.modulemap"; sourceTree = "<group>"; };
+		CE4EBE07E5A638799098A4F2ACDE0184 /* LuminanceThreshold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LuminanceThreshold.swift; path = Pod/Classes/Core/Filters/LuminanceThreshold.swift; sourceTree = "<group>"; };
+		D0A9B79553D7FE2DC4E02DED5C303C6B /* MTLContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLContext.swift; path = Pod/Classes/Core/MTLImage/MTLContext.swift; sourceTree = "<group>"; };
+		D6FA1543F8E3CE81729FE0BF65DB1A9E /* Scatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scatter.swift; path = Pod/Classes/Core/Filters/Scatter.swift; sourceTree = "<group>"; };
+		DB9127817D204903A2A3E4AA8A551BF5 /* Pods-BitCam-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BitCam-acknowledgements.plist"; sourceTree = "<group>"; };
+		DBB858E51D4D5BD8B955D25318BAF36D /* Invert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Invert.swift; path = Pod/Classes/Core/Filters/Invert.swift; sourceTree = "<group>"; };
+		E135D84D5B99615A7FEDAC855CAD37E8 /* Annotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Annotation.swift; path = Pod/Classes/Core/Filters/Annotation.swift; sourceTree = "<group>"; };
+		E1A311373EA8687D33D8F05307A65B4E /* MTLView1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLView1.swift; path = Pod/Classes/Core/MTLImage/MTLView1.swift; sourceTree = "<group>"; };
+		E2F4FD86B0054AC72505F4B108D80764 /* LanczosScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanczosScale.swift; path = Pod/Classes/Core/Filters/LanczosScale.swift; sourceTree = "<group>"; };
+		E4284BE98D68DCB5181AB9835AF780C5 /* Sketch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sketch.swift; path = Pod/Classes/Core/Filters/Sketch.swift; sourceTree = "<group>"; };
+		E4AF13682A6EC8B2981EB08B4CDA4097 /* GaussianBlur1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GaussianBlur1.swift; path = Pod/Classes/Core/Filters/GaussianBlur1.swift; sourceTree = "<group>"; };
+		E686441993980E13C6110EB6EF31428B /* HSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSV.swift; path = Pod/Classes/Core/Filters/HSV.swift; sourceTree = "<group>"; };
+		EB6A59528EC5D763A9EE50FFF51EED7C /* MTLLib.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLLib.swift; path = Pod/Classes/Core/MTLImage/MTLLib.swift; sourceTree = "<group>"; };
+		EDA675DE0DBF967052828B82917D240C /* MTLTexture+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MTLTexture+UIImage.swift"; path = "Pod/Classes/Core/Tools/MTLTexture+UIImage.swift"; sourceTree = "<group>"; };
+		EEC8B1900FC6B0977FC337BAEA7C8985 /* Histogram.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Histogram.swift; path = Pod/Classes/Core/Filters/Histogram.swift; sourceTree = "<group>"; };
+		EEE3D67148A8D1E1F0B96D71335C7B3D /* MTLBufferProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MTLBufferProvider.swift; path = Pod/Classes/Core/MTLImage/MTLBufferProvider.swift; sourceTree = "<group>"; };
+		EEFC43F98DC1E6EC3E64993A3181FC33 /* HoughLineDetection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HoughLineDetection.swift; path = Pod/Classes/Core/Filters/HoughLineDetection.swift; sourceTree = "<group>"; };
+		F0F75C7AB4CC46285F5777CB279D94A5 /* Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tools.swift; path = Pod/Classes/Core/Tools/Tools.swift; sourceTree = "<group>"; };
+		F60769C28564A0DE1119B2768FFE50BC /* Luminance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Luminance.swift; path = Pod/Classes/Core/Filters/Luminance.swift; sourceTree = "<group>"; };
+		F65468BD9169FD7C5F540E3FA5750856 /* Brightness.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Brightness.swift; path = Pod/Classes/Core/Filters/Brightness.swift; sourceTree = "<group>"; };
+		F77F672CC89501445304A9D42A399554 /* MTLFilterRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MTLFilterRecord+CoreDataProperties.swift"; path = "Pod/Classes/CoreData/FilterRecord/MTLFilterRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBCC04B30729F957A4CDE50CEC2096B8 /* Kuwahara.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kuwahara.swift; path = Pod/Classes/Core/Filters/Kuwahara.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C6AF0AF666B7DD557D0117ED58573DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57B8FC88E1356815D20EF70F710A6C11 /* CloudKit.framework in Frameworks */,
+				57F444E807E4B9FDC7E39B1DF331EC56 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD8AECDACC120438D81CDD5E1D35E23C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E20403DBE144CB08005AFA8B5FC48EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0363D83BDD429C591831C9500A2A3F1A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BD816BD5055AFEC0A68693FF31EC9A8A /* MTLFilterGroupRecord.swift */,
+				4658349C86E36A862B02965DFB8F4EF2 /* MTLFilterGroupRecord+CoreDataProperties.swift */,
+				5A60CCC99CC4A8F9FD6D99C9E81559C2 /* MTLFilterRecord.swift */,
+				F77F672CC89501445304A9D42A399554 /* MTLFilterRecord+CoreDataProperties.swift */,
+				C50D29E0E52AD42D737D16965F821598 /* MTLPropertyRecord.swift */,
+				8D05DC363511242B1C78B6C0C2A1E0FB /* MTLPropertyRecord+CoreDataProperties.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		0525F2D2A7029E10A5A015F13570FD30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				415B4A04D04E40A9210FD6657E1BB63E /* MTLImage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		06D78B04E10AECCDFA4D18B060861C38 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E135D84D5B99615A7FEDAC855CAD37E8 /* Annotation.swift */,
+				7AA7E0729244A9B91BD9A2D3ACB095D9 /* Blend.swift */,
+				64A0811073A1699D02F1E512CC96BE30 /* BoxBlur.swift */,
+				F65468BD9169FD7C5F540E3FA5750856 /* Brightness.swift */,
+				BB57F59F9158B239CAC85E015B50D7B9 /* Buffer.swift */,
+				0B0CE1F17320A09554D5BADA6B98B7F1 /* CannyEdgeDetection.swift */,
+				8E27ED8870D87778F9131D45B21192B2 /* ColorSelection.swift */,
+				7FF91C3FC5A1760195066B6163E03915 /* Contrast.swift */,
+				C66D468154C85D638CD28CA1D09C33CD /* Convolution.swift */,
+				193E5E9BDA3A80EBF7300AFC733D9895 /* Crop.swift */,
+				A354FB53A614F4C222CA35F260307B8F /* Crop2.swift */,
+				AF15538676065F8251F3C8858AE3DDCA /* CrossHatch.swift */,
+				3592ECA6092DCD9A85E29FE80C38BE22 /* Dilate.swift */,
+				A6C5B1A1C74AB247125C2F6A4271EC2A /* Distortion.swift */,
+				8F1BC8485D2B82D9D379D7FB8C8EAED6 /* Emboss.swift */,
+				BD3B0DF89FCADDB73A722E87283DFCAC /* Exposure.swift */,
+				929E018737908BB6EB7BFA92FA3F6EE8 /* GaussianBlur.swift */,
+				E4AF13682A6EC8B2981EB08B4CDA4097 /* GaussianBlur1.swift */,
+				07ABB9BC1ABBA5A316511D3D29F5B04C /* HarrisCornerDetection.swift */,
+				7CD3EC08A7C5088710E36FE18AB18C9A /* Haze.swift */,
+				81F1E5307BE3ACABB6B38B51BBCF29F8 /* HighlightShadow.swift */,
+				EEC8B1900FC6B0977FC337BAEA7C8985 /* Histogram.swift */,
+				4AD20388D54532861728482FB15ABD78 /* Histogram1.swift */,
+				EEFC43F98DC1E6EC3E64993A3181FC33 /* HoughLineDetection.swift */,
+				E686441993980E13C6110EB6EF31428B /* HSV.swift */,
+				489338E17A6B205F531F3706D33AC0A4 /* Hue.swift */,
+				DBB858E51D4D5BD8B955D25318BAF36D /* Invert.swift */,
+				FBCC04B30729F957A4CDE50CEC2096B8 /* Kuwahara.swift */,
+				E2F4FD86B0054AC72505F4B108D80764 /* LanczosScale.swift */,
+				51EAB8FADE0B32A5A1F9FA1885E0969B /* LensFlare.swift */,
+				00C47718D3CCB25725585AE743350203 /* Levels.swift */,
+				CA2D97C03FB64DA671B5A2F0B2034370 /* LineDetection.swift */,
+				F60769C28564A0DE1119B2768FFE50BC /* Luminance.swift */,
+				CE4EBE07E5A638799098A4F2ACDE0184 /* LuminanceThreshold.swift */,
+				6E5EA41E2A94DD716B0AC0E4E92094F6 /* Mask.swift */,
+				52C1877C911FEA9C9CCCE38C38A89DCB /* Mask1.swift */,
+				03C89E1E0DFB9FEB33DB77D5915FF000 /* Mosaic.swift */,
+				EEE3D67148A8D1E1F0B96D71335C7B3D /* MTLBufferProvider.swift */,
+				7330F6A0D2DA4C2FD1ECEA4FD691F87F /* MTLCamera.swift */,
+				D0A9B79553D7FE2DC4E02DED5C303C6B /* MTLContext.swift */,
+				BEDB58CF03BBAFE15520EE37BBC3A196 /* MTLDataManager.swift */,
+				7F339E5D049EAAF2AA8F0C3911BF4FE0 /* MTLFilter.swift */,
+				00C99E391CD9393DE85ADDEE3F67A8F3 /* MTLFilterGroup.swift */,
+				789B09E055916E39E332F49F5CB07C4D /* MTLImage.swift */,
+				EB6A59528EC5D763A9EE50FFF51EED7C /* MTLLib.swift */,
+				7A4A4970358EFF9E4D7D6EE0850276D3 /* MTLMatrix.swift */,
+				86ACD10C7F93495E78BF10A3C263D1F5 /* MTLMPSFilter.swift */,
+				5174CE301C80E1A429741D315506CF52 /* MTLObject.swift */,
+				B03C450726CA42994CCB64C6090FBD66 /* MTLPicture.swift */,
+				6BA0B6C173BBA59923FBB0E97E2D1D20 /* MTLProperty.swift */,
+				EDA675DE0DBF967052828B82917D240C /* MTLTexture+UIImage.swift */,
+				A64D89ED3E7417ED640485FD84319B62 /* MTLTypes.swift */,
+				A11EEB407476A2D273DC1D5A7DEECC3E /* MTLView.swift */,
+				E1A311373EA8687D33D8F05307A65B4E /* MTLView1.swift */,
+				91CE4B8DB3C4F29D48CCF9A98C419C6B /* NonMaximumSuppression.swift */,
+				6D323B046FA564886C4082C777377D6A /* OilPaint.swift */,
+				92B694323811673EC2FD420B042B81E4 /* PerlinNoise.swift */,
+				BD2CB97B7AA4799F0105DCF2DAE867F8 /* Pixellate.swift */,
+				7D54470721B4DC66CB60CCCD9C23F53B /* PolkaDot.swift */,
+				A9B76D34353CE8CB61C68FFA855E0874 /* Saturation.swift */,
+				D6FA1543F8E3CE81729FE0BF65DB1A9E /* Scatter.swift */,
+				5539E331B442502289740CE202F44719 /* SelectiveHSL.swift */,
+				837EFF0B9BC9CDA961D0585318EB0F20 /* SelectiveHSL1.swift */,
+				4EB74677DF87947DDD7691B919EBB35D /* Sharpen.swift */,
+				E4284BE98D68DCB5181AB9835AF780C5 /* Sketch.swift */,
+				40D4A4FA9428F6F47A6D796B67B79058 /* Smudge.swift */,
+				5BF75319158754BC1F3770637A413FA6 /* SobelEdgeDetection.swift */,
+				C6B339A0A0A0BE5F1F90AD5B2F173526 /* SobelEdgeDetectionThreshold.swift */,
+				0061604F74FFABC8FD94AE31F304DA11 /* Straighten.swift */,
+				A58D23167B005C479F6A7C9C3224EF3B /* Template.swift */,
+				953DB5A7B2BC5F0F817409C72E46E9F6 /* Tent.swift */,
+				3801062FD70E091AB9900FD3C54CB20F /* ToneCurve.swift */,
+				F0F75C7AB4CC46285F5777CB279D94A5 /* Tools.swift */,
+				3685C7FCD98E1B12BC9319C86DCF4290 /* Toon.swift */,
+				B17AE2598FE86FA8E70426BD087EB3DA /* Transform.swift */,
+				A83F30D22D5CF5E3B0729EE86B214BF2 /* UIImage+MTLTexture.swift */,
+				9E59927C41E733BBB73EEB3FF7459E4E /* UIImage+Scale.swift */,
+				836F9B3C5F95F96154E87D886657311E /* UnsharpMask.swift */,
+				A385091C69BA04AF6114FAA657E00C7D /* Vignette.swift */,
+				2CDABEF59CE808C36403E43B2D93B4F6 /* Voronoi.swift */,
+				6D124633635C67774B5FEF05490A3A52 /* Water.swift */,
+				B64AD69257317BD0A7DACDAE3FD2839B /* WeakPixelInclusion.swift */,
+				C313BE2AA3CD251A3AFE477ED8B290A2 /* WhiteBalance.swift */,
+				8340DB7ED54733C59FF36C0799CD166F /* XYDerivative.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		13138DEA33D4190F83F7924D3EE08CF8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5E65D9603554E4996BECF800FF4A6E5C /* CloudKit.framework */,
+				0A69DC6B88C09526CC39F0741C6FD477 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		409B445B4EDD4B4669567EF7B7842ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				171A3EC2E236B4ACA4F088AD64044986 /* MTLImage.framework */,
+				3BFBF8F7D6BFD0DAD594C2BF1B599C96 /* Pods_BitCam.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		415B4A04D04E40A9210FD6657E1BB63E /* MTLImage */ = {
+			isa = PBXGroup;
+			children = (
+				CA018A6F856932D94552008FE6FB0CCF /* CloudKit */,
+				06D78B04E10AECCDFA4D18B060861C38 /* Core */,
+				0363D83BDD429C591831C9500A2A3F1A /* CoreData */,
+				61A4A366C26783FDFFE99A14D3CC4F26 /* Resources */,
+				EBFBE544036DEEBEB13A8354DCD190E7 /* Support Files */,
+			);
+			path = MTLImage;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13138DEA33D4190F83F7924D3EE08CF8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61A4A366C26783FDFFE99A14D3CC4F26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADFE59977993E5928B00DF1D18F65ECE /* default.metallib */,
+				72B6B8FE7A296DDEE4190C0C94872E9C /* default.metallib */,
+				0CEAAAD9C1E617ABB7039BF3DCE9DE9E /* images.xcassets */,
+				04CE3C02890598A956D8818537AE1CE9 /* MTLImage.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		76245A88F369947193FC390C25C08AB0 /* Pods-BitCam */ = {
+			isa = PBXGroup;
+			children = (
+				0B1929AF79075C5DB1A11B697009F7B6 /* Info.plist */,
+				CDC0938DD077AA476B78B6D30878E18D /* Pods-BitCam.modulemap */,
+				85392E66625821A8FA0249B6ED1244A6 /* Pods-BitCam-acknowledgements.markdown */,
+				DB9127817D204903A2A3E4AA8A551BF5 /* Pods-BitCam-acknowledgements.plist */,
+				1D446C4B130990C66F6CFB12BFBD2257 /* Pods-BitCam-dummy.m */,
+				0A670E58967B775FCBC6C2C398567A9B /* Pods-BitCam-frameworks.sh */,
+				4384A6C6F9E16C6F0D78C0744CBD0E51 /* Pods-BitCam-resources.sh */,
+				5B14524778DF33E8D94597242297C74E /* Pods-BitCam-umbrella.h */,
+				B379D16216CC2AA44F0A92B6BB4185C1 /* Pods-BitCam.debug.xcconfig */,
+				4E2F26555B320FC650F66D7875D16316 /* Pods-BitCam.release.xcconfig */,
+			);
+			name = "Pods-BitCam";
+			path = "Target Support Files/Pods-BitCam";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				0525F2D2A7029E10A5A015F13570FD30 /* Pods */,
+				409B445B4EDD4B4669567EF7B7842ADD /* Products */,
+				D45C1E6D40934188F36F429BD7C42790 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CA018A6F856932D94552008FE6FB0CCF /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				1FA19E85855324A97F291F218BD126E2 /* MTLCloudKitManager.swift */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
+		D45C1E6D40934188F36F429BD7C42790 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				76245A88F369947193FC390C25C08AB0 /* Pods-BitCam */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EBFBE544036DEEBEB13A8354DCD190E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6F1104D68769C222A67E5FEE4F91457 /* Info.plist */,
+				7D09607F2189CB13F8ACD5DCC3A2F6A3 /* MTLImage.modulemap */,
+				75BE7562D01306C29792794AA374CF56 /* MTLImage.xcconfig */,
+				590EB9DD8E4EAC485CF1660D94A8A9DB /* MTLImage-dummy.m */,
+				4DE48AE4B38BE34E26C422CF8F3502F6 /* MTLImage-prefix.pch */,
+				058E5A41A9159E3C049A534C089BE710 /* MTLImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MTLImage";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A35EDA7AB02B22A2F7903F8F6C2FFDF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F21369198C8DBA653665E9BF2413CA /* MTLImage-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D687C119CBD5B65063DFDEEA0A323A1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				098512AA9CE95BB1B4FC12C2B35EC002 /* Pods-BitCam-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A92035F7449C14E36196394B6DCA812F /* MTLImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0F53D07F327C1554645895106B2A46 /* Build configuration list for PBXNativeTarget "MTLImage" */;
+			buildPhases = (
+				AE5E493761CC627BCA1135781F0DBDC0 /* Sources */,
+				1C6AF0AF666B7DD557D0117ED58573DA /* Frameworks */,
+				CB6768058C83B2A6A14E2A7014B9F939 /* Resources */,
+				A35EDA7AB02B22A2F7903F8F6C2FFDF7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTLImage;
+			productName = MTLImage;
+			productReference = 171A3EC2E236B4ACA4F088AD64044986 /* MTLImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE9E34F3A2864A69519EA220CC19FD35 /* Pods-BitCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 645DFDDA6755D296325B5F4104383BF2 /* Build configuration list for PBXNativeTarget "Pods-BitCam" */;
+			buildPhases = (
+				B6F32A782B93A40E9816053A93A087A1 /* Sources */,
+				BD8AECDACC120438D81CDD5E1D35E23C /* Frameworks */,
+				D687C119CBD5B65063DFDEEA0A323A1D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B49F2A24E0A2611943E7ED736D0950E /* PBXTargetDependency */,
+			);
+			name = "Pods-BitCam";
+			productName = "Pods-BitCam";
+			productReference = 3BFBF8F7D6BFD0DAD594C2BF1B599C96 /* Pods_BitCam.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 409B445B4EDD4B4669567EF7B7842ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A92035F7449C14E36196394B6DCA812F /* MTLImage */,
+				DE9E34F3A2864A69519EA220CC19FD35 /* Pods-BitCam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB6768058C83B2A6A14E2A7014B9F939 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC12248CE18D8937E1B0BCF1A900B99A /* default.metallib in Resources */,
+				458ADF26683CA7D21507CD6B76E03652 /* default.metallib in Resources */,
+				242D339074081B63E368CF21016475C2 /* images.xcassets in Resources */,
+				663080964D5728E1A50B9D6AAA72A457 /* MTLImage.xcdatamodeld in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE5E493761CC627BCA1135781F0DBDC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6C770372426EA3A353AB040FE990433 /* Annotation.swift in Sources */,
+				B058B034C9ED6E4281EDF1DCA39CD81C /* Blend.swift in Sources */,
+				2767754F3DD03B7C2F7DB86026BE824F /* BoxBlur.swift in Sources */,
+				D9A4ADDB587A27CFC8F26E25FE8A96E1 /* Brightness.swift in Sources */,
+				7B86648EFF625925CCD18F66DEE1C5C9 /* Buffer.swift in Sources */,
+				0AC141F5CF0B3DF8E57E42659A83BAFE /* CannyEdgeDetection.swift in Sources */,
+				91BC9D46C6FFFB5CA35DA98B054F1023 /* ColorSelection.swift in Sources */,
+				A86B7C9383E2923B5C460892AB034F02 /* Contrast.swift in Sources */,
+				A8587EBBFE745C6626E184559BF5A5D1 /* Convolution.swift in Sources */,
+				471C25FE8BBF1A610D28ECA47CC716FE /* Crop.swift in Sources */,
+				F7FA429C9F43D02D1F781E1A9CC70B1A /* Crop2.swift in Sources */,
+				8BCB43B0ACDAA42981420134F9886AE0 /* CrossHatch.swift in Sources */,
+				9AEB283B9E953A50EEC5941168CC9663 /* Dilate.swift in Sources */,
+				0B71096F2A5CB6C6B866FAA450228466 /* Distortion.swift in Sources */,
+				FED998466EAD40A730BA5C9FA5264572 /* Emboss.swift in Sources */,
+				7BE8E4409F94AF36B81229D88066495D /* Exposure.swift in Sources */,
+				DEDF091E0647EDFE4540F315081827FB /* GaussianBlur.swift in Sources */,
+				BCB76278496D27D5CAD76D3CA7A8DB8E /* GaussianBlur1.swift in Sources */,
+				9EFF67D8AC48242098E4C45C2019BA85 /* HarrisCornerDetection.swift in Sources */,
+				0CAA7E33F64E7187AF4EE9D515BD9DDB /* Haze.swift in Sources */,
+				01489F6BF38DCECA3923F5754F43EF60 /* HighlightShadow.swift in Sources */,
+				F293FC6EBEEAB4592DB4016A48745A7D /* Histogram.swift in Sources */,
+				A30156AA1AFDE4E3E2040233333AAE74 /* Histogram1.swift in Sources */,
+				DA66CDFE1B0BBE3228FF12F1D4C6B299 /* HoughLineDetection.swift in Sources */,
+				D8D6CC95FC368071BA5C2995E93CDBB5 /* HSV.swift in Sources */,
+				524B076332F185C89E080E0766EE0FC5 /* Hue.swift in Sources */,
+				80E064A2FABC9C1806200671770E9C38 /* Invert.swift in Sources */,
+				DAE49E808D78A4D6354DAC9451E8A611 /* Kuwahara.swift in Sources */,
+				CD82D3FAD8B2EA3AE485BC84FDF51678 /* LanczosScale.swift in Sources */,
+				222CFF6FC7ABAC805B60C1EC51513E7D /* LensFlare.swift in Sources */,
+				86A0625C59ACF36DE8EABE5565FA8CB8 /* Levels.swift in Sources */,
+				DA39B6E6F072C8856F16637582083390 /* LineDetection.swift in Sources */,
+				A42BC5F7377F06CE313755C665F3A9B2 /* Luminance.swift in Sources */,
+				11D55B7BD2D4EEE88727BC198EB40200 /* LuminanceThreshold.swift in Sources */,
+				8D825F8FEBB2CA02434AF6207DD5A9E5 /* Mask.swift in Sources */,
+				951E9BD2F693AA595004C655C93AFB9E /* Mask1.swift in Sources */,
+				232BE2A4FDB68F26ADD5D30B5342700E /* Mosaic.swift in Sources */,
+				70A89A1A8CA52FE83EF667690FBF6795 /* MTLBufferProvider.swift in Sources */,
+				E4FB13E19822E86A5634B38DB0D286AB /* MTLCamera.swift in Sources */,
+				F0A5055964A020A135D3586C39FD15EA /* MTLCloudKitManager.swift in Sources */,
+				994B6A3F384A88802674359D3062265C /* MTLContext.swift in Sources */,
+				0F45ED66F38AC01C0438090089E36769 /* MTLDataManager.swift in Sources */,
+				B5CD3D6118EF7768CC22B0233FC3BBDF /* MTLFilter.swift in Sources */,
+				E795F50E71082E0EB72F6A2C822BC06B /* MTLFilterGroup.swift in Sources */,
+				5C0317C757B03D0F3B8F670D1DDFD9A4 /* MTLFilterGroupRecord+CoreDataProperties.swift in Sources */,
+				BA67149354C7ED3C8BC094CE8A5BE318 /* MTLFilterGroupRecord.swift in Sources */,
+				E1730EBE0CF50E82E8C93291C54AF7AC /* MTLFilterRecord+CoreDataProperties.swift in Sources */,
+				78175CA80A4A643D7B23591792B15D01 /* MTLFilterRecord.swift in Sources */,
+				04850C6DAB63029EE14B93D6B4B7A9F2 /* MTLImage-dummy.m in Sources */,
+				A497439562FBD2480186C1741667B05B /* MTLImage.swift in Sources */,
+				C98CD1A0345F72CD6DF323907113A10D /* MTLLib.swift in Sources */,
+				2D587AC3ABD633A96BD5DF3C9160BC47 /* MTLMatrix.swift in Sources */,
+				9852FE98DD27C9D98A78B71DEBC6A004 /* MTLMPSFilter.swift in Sources */,
+				A8CF2C2A8B6AB5FB1084126C070EE178 /* MTLObject.swift in Sources */,
+				48A2721C23B3C37EDD4FBB47128D6717 /* MTLPicture.swift in Sources */,
+				0542DBBEF11CB449689780A8C76FB4C6 /* MTLProperty.swift in Sources */,
+				7F02433EFD41EE1950C23EE923A69225 /* MTLPropertyRecord+CoreDataProperties.swift in Sources */,
+				D318571F88A85482B462063EDE2FECC0 /* MTLPropertyRecord.swift in Sources */,
+				05615DB820DBD63DE5A1EE7778FBDA51 /* MTLTexture+UIImage.swift in Sources */,
+				0207DE2BB526465B69E7E565D9DA4C22 /* MTLTypes.swift in Sources */,
+				C3F063FF29F214FEB15B4A535728FCB1 /* MTLView.swift in Sources */,
+				55C847FCA7C16E146BDAA39C4FE566B4 /* MTLView1.swift in Sources */,
+				080052C528BD348BE86726CC180D96F8 /* NonMaximumSuppression.swift in Sources */,
+				9CADC5FADB6EF85148408ECF3822065D /* OilPaint.swift in Sources */,
+				EE85CFA89D2046B7CDB422315C074205 /* PerlinNoise.swift in Sources */,
+				4E66AC45B16C7FD327B71831B391CA69 /* Pixellate.swift in Sources */,
+				A7DD5B4C7B5153BBDF02E5DC3F5A73B7 /* PolkaDot.swift in Sources */,
+				C7B018869269DB90645A9211C2701763 /* Saturation.swift in Sources */,
+				6B960C23AB7C9A9070A0148C1EEF4FF9 /* Scatter.swift in Sources */,
+				FA9EF436805AB6F6AC33C0638AC73414 /* SelectiveHSL.swift in Sources */,
+				6C501043EB46BD7905C504F06AD497F4 /* SelectiveHSL1.swift in Sources */,
+				3B98BE7C85CA766DF9813E7E49CC77AC /* Sharpen.swift in Sources */,
+				996E30CD76B13C17EE803203E493D737 /* Sketch.swift in Sources */,
+				C149C02C72C1670B160BEEF6696500DC /* Smudge.swift in Sources */,
+				41CF103C80CD0179AFE9E44FA7870ED4 /* SobelEdgeDetection.swift in Sources */,
+				AAF1CD6DE12CDA2D1ECE565CFB3906F1 /* SobelEdgeDetectionThreshold.swift in Sources */,
+				C5324BE6BF52BB998AF2DB4EFB2A2BF1 /* Straighten.swift in Sources */,
+				CF08BF7882ECB705BA55F337F3FFE99E /* Template.swift in Sources */,
+				E4B22CBDDEB7819D0BD856276A8754E2 /* Tent.swift in Sources */,
+				4B7F45558B523D6A5DB00339BCD44077 /* ToneCurve.swift in Sources */,
+				7E76B0CDF3BCFC8C67504EDFD2E948D5 /* Tools.swift in Sources */,
+				841847805100031C04475E5D4FAA497A /* Toon.swift in Sources */,
+				D81C6D0E5AB8CD623C7987B69B59BC55 /* Transform.swift in Sources */,
+				3274F547CFC092839E21BCBD4BC4B081 /* UIImage+MTLTexture.swift in Sources */,
+				57903AB457877B8B5A27A9902214BAAE /* UIImage+Scale.swift in Sources */,
+				8DF115150398424ED5102EDB4E707622 /* UnsharpMask.swift in Sources */,
+				838CD206EA10FA37F3C8CF90C937ED69 /* Vignette.swift in Sources */,
+				B89B5EB488518EDCEBB34BFABDF7B665 /* Voronoi.swift in Sources */,
+				61B7D39403125C43208B835B4921B367 /* Water.swift in Sources */,
+				0B0DF99CD3E660C71260031C28290B17 /* WeakPixelInclusion.swift in Sources */,
+				9F527A516DA026DE0C3D8588B925C4DB /* WhiteBalance.swift in Sources */,
+				0F16E511EADBA5B3A7BED07A723444FB /* XYDerivative.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6F32A782B93A40E9816053A93A087A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8D2BFF196C05938AB37AE4C640B604 /* Pods-BitCam-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B49F2A24E0A2611943E7ED736D0950E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MTLImage;
+			target = A92035F7449C14E36196394B6DCA812F /* MTLImage */;
+			targetProxy = C25ED5035FAAB745761144055564FDA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		978688709F583115C3BD045A159D4B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BE7562D01306C29792794AA374CF56 /* MTLImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MTLImage/MTLImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTLImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTLImage/MTLImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MTLImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BFDD16001EC91AB1CC8BCCE9867E9973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BE7562D01306C29792794AA374CF56 /* MTLImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MTLImage/MTLImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MTLImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MTLImage/MTLImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MTLImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C574D5D847A1DA722F3699DB29D13461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2F26555B320FC650F66D7875D16316 /* Pods-BitCam.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BitCam/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BitCam/Pods-BitCam.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BitCam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D19D73B20BEC762283FC05290C689910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B379D16216CC2AA44F0A92B6BB4185C1 /* Pods-BitCam.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BitCam/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BitCam/Pods-BitCam.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BitCam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		645DFDDA6755D296325B5F4104383BF2 /* Build configuration list for PBXNativeTarget "Pods-BitCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D19D73B20BEC762283FC05290C689910 /* Debug */,
+				C574D5D847A1DA722F3699DB29D13461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0F53D07F327C1554645895106B2A46 /* Build configuration list for PBXNativeTarget "MTLImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDD16001EC91AB1CC8BCCE9867E9973 /* Debug */,
+				978688709F583115C3BD045A159D4B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04CE3C02890598A956D8818537AE1CE9 /* MTLImage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A7B7DCC39E4146151CEEF8C27EDB804 /* MTLImage.xcdatamodel */,
+			);
+			currentVersion = 8A7B7DCC39E4146151CEEF8C27EDB804 /* MTLImage.xcdatamodel */;
+			name = MTLImage.xcdatamodeld;
+			path = Pod/Classes/CoreData/MTLImage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

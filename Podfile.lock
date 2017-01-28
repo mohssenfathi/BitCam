@@ -1,0 +1,28 @@
+PODS:
+  - MTLImage (0.1.0):
+    - MTLImage/CloudKit (= 0.1.0)
+    - MTLImage/Core (= 0.1.0)
+    - MTLImage/CoreData (= 0.1.0)
+  - MTLImage/CloudKit (0.1.0)
+  - MTLImage/Core (0.1.0)
+  - MTLImage/CoreData (0.1.0)
+
+DEPENDENCIES:
+  - MTLImage (from `https://github.com/mohssenfathi/MTLImage/`, branch `BitCam`)
+
+EXTERNAL SOURCES:
+  MTLImage:
+    :branch: BitCam
+    :git: https://github.com/mohssenfathi/MTLImage/
+
+CHECKOUT OPTIONS:
+  MTLImage:
+    :commit: 5995734abc8c6e7a5972b29ae0d7531edaea82c5
+    :git: https://github.com/mohssenfathi/MTLImage/
+
+SPEC CHECKSUMS:
+  MTLImage: 863d8fb2b83d1cf39e4942f5db3b4d74af45c4de
+
+PODFILE CHECKSUM: 246b61193c56f26dbee35e18e3722ac1caf474b1
+
+COCOAPODS: 1.1.1
