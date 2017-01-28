@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MTLImage:
-    :commit: 5995734abc8c6e7a5972b29ae0d7531edaea82c5
+    :commit: 5cd2cdc81cfb8116ea0280b32efa13dfba192eed
     :git: https://github.com/mohssenfathi/MTLImage/
 
 SPEC CHECKSUMS:

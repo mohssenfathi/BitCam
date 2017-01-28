@@ -12,6 +12,7 @@
 		455C99A91E3D1EA0006749EA /* BitCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 455C99A71E3D1EA0006749EA /* BitCam.xcdatamodeld */; };
 		455C99AB1E3D1EA0006749EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455C99AA1E3D1EA0006749EA /* Assets.xcassets */; };
 		455C99AE1E3D1EA0006749EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455C99AC1E3D1EA0006749EA /* LaunchScreen.storyboard */; };
+		455C99BA1E3D2105006749EA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C99B91E3D2105006749EA /* CameraViewController.swift */; };
 		90D175B40CFDDE3A8E38FD69 /* Pods_BitCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9EAABCAFD40177393539FC /* Pods_BitCam.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		455C99AA1E3D1EA0006749EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455C99AD1E3D1EA0006749EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455C99AF1E3D1EA0006749EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		455C99B91E3D2105006749EA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		70E1EF63727F8B57A5CA3DB0 /* Pods-BitCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitCam/Pods-BitCam.debug.xcconfig"; sourceTree = "<group>"; };
 		F5958C42102352191585DC7F /* Pods-BitCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitCam/Pods-BitCam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 		455C99B81E3D1EDA006749EA /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				455C99B91E3D2105006749EA /* CameraViewController.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				455C99A91E3D1EA0006749EA /* BitCam.xcdatamodeld in Sources */,
 				455C99A11E3D1EA0006749EA /* AppDelegate.swift in Sources */,
+				455C99BA1E3D2105006749EA /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
