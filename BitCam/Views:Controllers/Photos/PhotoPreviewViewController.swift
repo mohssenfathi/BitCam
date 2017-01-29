@@ -60,7 +60,11 @@ class PhotoPreviewViewController: UIViewController {
             registerForPreviewing(with: self, sourceView: self.view)
         }
         
-        let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(PhotoPreviewViewController.share))
+        //let shareButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(PhotoPreviewViewController.share))
+        
+        let shareButton = UIBarButtonItem(image: #imageLiteral(resourceName: "share"), style: UIBarButtonItemStyle.plain, target: self
+            , action: #selector(PhotoPreviewViewController.share))
+        
         shareButton.tintColor = .white
         self.navigationItem.rightBarButtonItem = shareButton
         navigationController?.navigationBar.tintColor = .white

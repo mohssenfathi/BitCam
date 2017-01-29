@@ -375,7 +375,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BitCam" id="Hbg-Ez-r7h">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TAd-na-pzo">
+                        <barButtonItem key="leftBarButtonItem" image="Close-Button" style="plain" id="TAd-na-pzo">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="closeButtonPressed:" destination="NV3-zR-tB0" id="t8C-6A-lYD"/>
@@ -474,7 +474,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOn-e0-Hnr">
                                         <rect key="frame" x="0.0" y="401" width="375" height="158"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-kY-G9l">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-kY-G9l">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <prototypes>
@@ -589,6 +589,7 @@
         <image name="Brightness-Down" width="40" height="50"/>
         <image name="Brightness-Up" width="40" height="50"/>
         <image name="CaptureButton" width="78" height="78"/>
+        <image name="Close-Button" width="30" height="30"/>
         <image name="Contrast-Down" width="50" height="40"/>
         <image name="Contrast-Up" width="50" height="40"/>
         <image name="Library" width="30" height="30"/>
