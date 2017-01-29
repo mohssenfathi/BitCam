@@ -251,6 +251,7 @@
                         <outlet property="brightnessLabel" destination="4op-U8-coI" id="z3i-gf-s7W"/>
                         <outlet property="brightnessUpButton" destination="Zvt-oE-Zd1" id="SsL-8n-vxa"/>
                         <outlet property="brightnessView" destination="NCx-QG-n5T" id="YdC-Ir-LTX"/>
+                        <outlet property="captureButton" destination="sKd-25-u8K" id="0zk-95-rud"/>
                         <outlet property="contrastDownButton" destination="yn1-Om-Xlg" id="mGh-mu-08t"/>
                         <outlet property="contrastIndicator" destination="R1U-4x-LTC" id="YTu-9a-fbU"/>
                         <outlet property="contrastIndicatorConstraint" destination="sff-hJ-zzP" id="AyR-L3-t1L"/>
