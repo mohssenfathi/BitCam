@@ -23,6 +23,9 @@
 		455C99AB1E3D1EA0006749EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455C99AA1E3D1EA0006749EA /* Assets.xcassets */; };
 		455C99AE1E3D1EA0006749EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455C99AC1E3D1EA0006749EA /* LaunchScreen.storyboard */; };
 		455C99BA1E3D2105006749EA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C99B91E3D2105006749EA /* CameraViewController.swift */; };
+		459323CE1E3E98B100FFF9D4 /* BitCamAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459323CD1E3E98B100FFF9D4 /* BitCamAlertView.swift */; };
+		459323D01E3E98EE00FFF9D4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459323CF1E3E98EE00FFF9D4 /* AlertView.swift */; };
+		459323D21E3E991800FFF9D4 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459323D11E3E991800FFF9D4 /* AlertView.xib */; };
 		90D175B40CFDDE3A8E38FD69 /* Pods_BitCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9EAABCAFD40177393539FC /* Pods_BitCam.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,9 @@
 		455C99AD1E3D1EA0006749EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455C99AF1E3D1EA0006749EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		455C99B91E3D2105006749EA /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		459323CD1E3E98B100FFF9D4 /* BitCamAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCamAlertView.swift; sourceTree = "<group>"; };
+		459323CF1E3E98EE00FFF9D4 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		459323D11E3E991800FFF9D4 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		70E1EF63727F8B57A5CA3DB0 /* Pods-BitCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitCam/Pods-BitCam.debug.xcconfig"; sourceTree = "<group>"; };
 		F5958C42102352191585DC7F /* Pods-BitCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitCam/Pods-BitCam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +167,7 @@
 		455C99B71E3D1EDA006749EA /* Views/Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				459323CC1E3E982C00FFF9D4 /* Alert */,
 				45520D1E1E3D455A008D0E2E /* Photos */,
 				455C99B81E3D1EDA006749EA /* Camera */,
 			);
@@ -175,6 +182,16 @@
 				454244CE1E3D300E00735B59 /* BorderView.swift */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		459323CC1E3E982C00FFF9D4 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				459323CF1E3E98EE00FFF9D4 /* AlertView.swift */,
+				459323D11E3E991800FFF9D4 /* AlertView.xib */,
+				459323CD1E3E98B100FFF9D4 /* BitCamAlertView.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		811653BED3DA3BAA02A4655E /* Pods */ = {
@@ -252,6 +269,7 @@
 				455C99AE1E3D1EA0006749EA /* LaunchScreen.storyboard in Resources */,
 				455C99AB1E3D1EA0006749EA /* Assets.xcassets in Resources */,
 				455C99A61E3D1EA0006749EA /* Main.storyboard in Resources */,
+				459323D21E3E991800FFF9D4 /* AlertView.xib in Resources */,
 				454244D71E3D38F900735B59 /* MarkBit.ttf in Resources */,
 				454244D31E3D37F000735B59 /* 8bit.ttf in Resources */,
 			);
@@ -319,6 +337,8 @@
 				45520D231E3D455A008D0E2E /* PhotoPreviewViewController.swift in Sources */,
 				455C99A11E3D1EA0006749EA /* AppDelegate.swift in Sources */,
 				455C99BA1E3D2105006749EA /* CameraViewController.swift in Sources */,
+				459323CE1E3E98B100FFF9D4 /* BitCamAlertView.swift in Sources */,
+				459323D01E3E98EE00FFF9D4 /* AlertView.swift in Sources */,
 				454244CF1E3D300E00735B59 /* BorderView.swift in Sources */,
 				45520D1D1E3D4400008D0E2E /* BitCamAlbum.swift in Sources */,
 				454244CD1E3D2DCF00735B59 /* BitCamColors.swift in Sources */,

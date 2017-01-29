@@ -14,13 +14,14 @@ class BitCamAlbum {
     static let albumName = "BitCam"
     static let sharedInstance = BitCamAlbum()
     
+    var assetCollectionPlaceholder: PHObjectPlaceholder!
     var assetCollection: PHAssetCollection?
     
     init() {
-        loadLumenAlbum(completion: nil)
+        loadBitCamAlbum(completion: nil)
     }
     
-    func loadLumenAlbum(completion: ((_ album: PHAssetCollection?) -> ())?) {
+    func loadBitCamAlbum(completion: ((_ album: PHAssetCollection?) -> ())?) {
         
         func fetchAssetCollectionForAlbum() -> PHAssetCollection? {
             
@@ -41,11 +42,21 @@ class BitCamAlbum {
             return
         }
         
+        
         PHPhotoLibrary.shared().performChanges({
-            PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: BitCamAlbum.albumName)
-        }) { success, _ in
+            
+            let request = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: BitCamAlbum.albumName)
+            self.assetCollectionPlaceholder = request.placeholderForCreatedAssetCollection
+            
+        }) { success, error in
+            
+            print(error ?? "")
+            
             if success {
-                self.assetCollection = fetchAssetCollectionForAlbum()
+                
+                let fetchResult = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [self.assetCollectionPlaceholder.localIdentifier],
+                                                                          options: nil)
+                self.assetCollection = fetchResult.firstObject
                 completion?(self.assetCollection)
             }
             else {

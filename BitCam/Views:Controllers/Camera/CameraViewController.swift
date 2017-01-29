@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import MTLImage
 
 class CameraViewController: UIViewController {
@@ -82,6 +83,8 @@ class CameraViewController: UIViewController {
         brightnessIndicator.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2.0)
     }
     
+//  MARK: - Actions
+    
     @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
         
         contrast.contrast = max(0.3, contrast.contrast - 0.6/indicatorSteps)
@@ -106,21 +109,31 @@ class CameraViewController: UIViewController {
         updateBrightnessIndicator(with: CGFloat(Tools.convert(brightness.brightness, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
-    func updateBrightnessIndicator(with percentage: CGFloat) {
-        brightnessIndicatorConstraint.constant = brightnessIndicatorRange * percentage
-    }
-    
-    func updateContrastIndicator(with percentage: CGFloat) {
-        contrastIndicatorConstraint.constant = contrastIndicatorRange * percentage + 4 // Gross, I know
-    }
-    
-    func animate(duration: CGFloat, _ animation: @escaping (() -> ())) {
-        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .beginFromCurrentState, animations: { 
-            animation()
-        }, completion: nil)
+    @IBAction func libraryButtonPressed(_ sender: UIButton) {
+     
+        if PhotosManager.sharedManager.authorizationStatus() == .authorized  {
+            performSegue(withIdentifier: "photos", sender: self)
+            return
+        }
+        
+        PhotosManager.sharedManager.requestAuthorization { (status) in
+            
+            if status == PHAuthorizationStatus.authorized {
+                self.performSegue(withIdentifier: "photos", sender: self)
+            }
+            else {
+                // Yell at user
+            }
+            
+        }
     }
     
     @IBAction func captureButtonPressed(_ sender: UIButton) {
+        
+        if PhotosManager.sharedManager.authorizationStatus() != .authorized {
+            // Alert user, request authorization
+            return
+        }
         
         camera.takePhoto { (image, error) in
             guard let image = image, error == nil else {
@@ -132,5 +145,21 @@ class CameraViewController: UIViewController {
         
     }
     
+    
+//  MARK: - Slider Indicators
+
+    func updateBrightnessIndicator(with percentage: CGFloat) {
+        brightnessIndicatorConstraint.constant = brightnessIndicatorRange * percentage
+    }
+    
+    func updateContrastIndicator(with percentage: CGFloat) {
+        contrastIndicatorConstraint.constant = contrastIndicatorRange * percentage + 4 // Gross, I know
+    }
+    
+    func animate(duration: CGFloat, _ animation: @escaping (() -> ())) {
+        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .beginFromCurrentState, animations: {
+            animation()
+        }, completion: nil)
+    }
     
 }

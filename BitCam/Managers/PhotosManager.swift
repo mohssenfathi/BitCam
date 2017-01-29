@@ -15,6 +15,20 @@ class PhotosManager: NSObject {
     var requestIds = [PHImageRequestID]()
   
     
+//  MARK: - Authorization
+    
+    func authorizationStatus() -> PHAuthorizationStatus {
+        return PHPhotoLibrary.authorizationStatus()
+    }
+    
+    func requestAuthorization(completion: ((PHAuthorizationStatus) -> ())?) {
+        
+        PHPhotoLibrary.requestAuthorization { (status) in
+            completion?(status)
+        }
+        
+    }
+    
 //  MARK: - Saving
     func saveToBitCamAlbum(_ photo: UIImage) {
         BitCamAlbum.sharedInstance.savePhoto(photo)
@@ -23,9 +37,9 @@ class PhotosManager: NSObject {
     
 //  MARK: - Fetch
     
-    func lumenAssets(completion: @escaping (_ assets: [PHAsset]) -> ()) {
+    func bitCamAssets(completion: @escaping (_ assets: [PHAsset]) -> ()) {
     
-        BitCamAlbum.sharedInstance.loadLumenAlbum { (collection) in
+        BitCamAlbum.sharedInstance.loadBitCamAlbum { (collection) in
             if collection == nil {
                 completion([])
                 return

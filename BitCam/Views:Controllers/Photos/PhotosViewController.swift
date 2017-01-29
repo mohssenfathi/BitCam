@@ -30,7 +30,7 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PhotosManager.sharedManager.lumenAssets { (assets) in
+        PhotosManager.sharedManager.bitCamAssets { (assets) in
             
             self.assets = assets
             self.noPhotosLabel.isHidden = (assets.count > 0)
