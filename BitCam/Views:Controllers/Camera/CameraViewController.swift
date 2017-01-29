@@ -58,7 +58,6 @@ class CameraViewController: UIViewController {
     }
     
     func setup() {
-        
         mtlView.contentMode = .scaleAspectFit
         
         luminance.threshold1 = 0.27
@@ -83,25 +82,21 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
-        
         contrast.contrast = max(0.3, contrast.contrast - 0.6/indicatorSteps)
         updateContrastIndicator(with: CGFloat(Tools.convert(contrast.contrast, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
     @IBAction func contrastUpButtonPressed(_ sender: UIButton) {
-        
         contrast.contrast = min(0.6, contrast.contrast + 0.6/indicatorSteps)
         updateContrastIndicator(with: CGFloat(Tools.convert(contrast.contrast, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
     @IBAction func brightnessDownButtonPressed(_ sender: UIButton) {
-        
         brightness.brightness = max(0.3, brightness.brightness - 0.6/indicatorSteps)
         updateBrightnessIndicator(with: CGFloat(Tools.convert(brightness.brightness, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
     
     @IBAction func brightnessUpButtonPressed(_ sender: UIButton) {
-
         brightness.brightness = min(0.6, brightness.brightness + 0.6/indicatorSteps)
         updateBrightnessIndicator(with: CGFloat(Tools.convert(brightness.brightness, oldMin: 0.3, oldMax: 0.6, newMin: 0.0, newMax: 1.0)))
     }
@@ -121,7 +116,6 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func captureButtonPressed(_ sender: UIButton) {
-        
         camera.takePhoto { (image, error) in
             guard let image = image, error == nil else {
                 return
@@ -131,6 +125,5 @@ class CameraViewController: UIViewController {
         }
         
     }
-    
     
 }
