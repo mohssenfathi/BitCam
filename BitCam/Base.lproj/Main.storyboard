@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                                         <rect key="frame" x="323" y="45" width="24" height="347"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvt-oE-Zd1">
-                                                <rect key="frame" x="-3.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="-3" y="0.0" width="30" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="bJy-Qu-pIv"/>
                                                     <constraint firstAttribute="height" constant="40" id="frp-mF-dEF"/>
@@ -60,7 +60,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVm-Yd-0oh">
-                                                <rect key="frame" x="-3.5" y="307" width="30" height="40"/>
+                                                <rect key="frame" x="-3" y="307" width="30" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="9LO-D5-CMn"/>
                                                     <constraint firstAttribute="width" constant="30" id="9dn-Bp-xsa"/>
@@ -71,20 +71,20 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRIGHTNESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4op-U8-coI">
-                                                <rect key="frame" x="-31.5" y="163" width="104" height="21"/>
+                                                <rect key="frame" x="-31" y="163" width="104" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcM-Zb-QA8">
-                                                <rect key="frame" x="22.5" y="39" width="3" height="79"/>
+                                                <rect key="frame" x="23" y="39" width="3" height="79"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="3" id="dBA-Al-JYk"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-hb-FtJ">
-                                                <rect key="frame" x="22.5" y="229" width="3" height="81"/>
+                                                <rect key="frame" x="23" y="229" width="3" height="81"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="3" id="Blm-hP-OO8"/>
@@ -191,9 +191,9 @@
                                                     <action selector="captureButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qb0-1r-ncy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo9-4S-dTw">
-                                                <rect key="frame" x="0.0" y="148" width="48" height="30"/>
-                                                <state key="normal" title="Library"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo9-4S-dTw">
+                                                <rect key="frame" x="0.0" y="148" width="30" height="30"/>
+                                                <state key="normal" image="Library"/>
                                                 <connections>
                                                     <action selector="libraryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qii-EQ-Fj2"/>
                                                 </connections>
@@ -591,6 +591,7 @@
         <image name="CaptureButton" width="78" height="78"/>
         <image name="Contrast-Down" width="50" height="40"/>
         <image name="Contrast-Up" width="50" height="40"/>
+        <image name="Library" width="30" height="30"/>
         <image name="Slider-Pointer" width="10" height="25"/>
         <image name="arrow-down" width="30" height="12"/>
         <image name="share" width="17" height="24"/>
