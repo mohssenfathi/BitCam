@@ -141,6 +141,8 @@ class CameraViewController: UIViewController {
             return
         }
         
+        animatePictureTaken()
+        
         camera.takePhoto { (image, error) in
             guard let image = image, error == nil else {
                 return
@@ -208,6 +210,28 @@ class CameraViewController: UIViewController {
         UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .beginFromCurrentState, animations: {
             animation()
         }, completion: nil)
+    }
+    
+// MARK: - Animation
+    
+    func animatePictureTaken() {
+        let animationView = UIView(frame: CGRect(x: 0, y: 0, width: mtlView.frame.size.width, height: mtlView.frame.size.height))
+        animationView.backgroundColor = UIColor.white
+        animationView.alpha = 0.0
+        
+        mtlView.addSubview(animationView)
+        captureButton.isEnabled = false
+        
+        UIView.animate(withDuration: 0.1, animations: {
+            animationView.alpha = 0.8
+        }) { (finished) in
+            UIView.animate(withDuration: 0.2, animations: {
+                animationView.alpha = 0.0
+            }, completion: { (finished) in
+                animationView.removeFromSuperview()
+                self.captureButton.isEnabled = true
+            })
+        }
     }
 
 }
