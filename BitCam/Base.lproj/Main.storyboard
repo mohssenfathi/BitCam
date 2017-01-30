@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="MarkBit.ttf">
+            <string>VCROSDMono</string>
+        </array>
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
         </array>
@@ -71,20 +74,20 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRIGHTNESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4op-U8-coI">
-                                                <rect key="frame" x="-31.5" y="163" width="104" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="-30" y="166" width="100" height="15"/>
+                                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcM-Zb-QA8">
-                                                <rect key="frame" x="22.5" y="39" width="3" height="79"/>
+                                                <rect key="frame" x="22.5" y="39" width="3" height="82"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="3" id="dBA-Al-JYk"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-hb-FtJ">
-                                                <rect key="frame" x="22.5" y="229" width="3" height="81"/>
+                                                <rect key="frame" x="22.5" y="226" width="3" height="84"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="3" id="Blm-hP-OO8"/>
@@ -139,27 +142,27 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTRAST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzc-w1-Fb6">
-                                                <rect key="frame" x="92" y="28" width="91" height="20"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <rect key="frame" x="97.5" y="30.5" width="80" height="15"/>
+                                                <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
                                                 <color key="textColor" red="0.92395279255319152" green="0.92395279255319152" blue="0.92395279255319152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uf-pa-MiP">
-                                                <rect key="frame" x="44" y="36" width="44" height="3"/>
+                                                <rect key="frame" x="44" y="36" width="49.5" height="3"/>
                                                 <color key="backgroundColor" white="1" alpha="0.79952668795620441" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="mqo-ZH-itt"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jap-7e-IkD">
-                                                <rect key="frame" x="188" y="36" width="44" height="3"/>
+                                                <rect key="frame" x="182.5" y="36" width="49.5" height="3"/>
                                                 <color key="backgroundColor" white="1" alpha="0.79952668795620441" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="kU4-gb-TNL"/>
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider-Pointer" translatesAutoresizingMaskIntoConstraints="NO" id="R1U-4x-LTC">
-                                                <rect key="frame" x="132" y="0.0" width="10" height="25"/>
+                                                <rect key="frame" x="132" y="2.5" width="10" height="25"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -486,14 +489,14 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29f-OR-DI1">
-                                                                    <rect key="frame" x="30" y="22" width="282.5" height="16.5"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                    <rect key="frame" x="30" y="23.5" width="275.5" height="12.5"/>
+                                                                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOy-iI-0p7">
-                                                                    <rect key="frame" x="320.5" y="22" width="34.5" height="16.5"/>
-                                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                    <rect key="frame" x="313.5" y="23.5" width="41.5" height="12.5"/>
+                                                                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>

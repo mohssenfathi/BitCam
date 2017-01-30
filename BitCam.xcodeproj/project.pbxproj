@@ -26,6 +26,7 @@
 		459323CE1E3E98B100FFF9D4 /* BitCamAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459323CD1E3E98B100FFF9D4 /* BitCamAlertView.swift */; };
 		459323D01E3E98EE00FFF9D4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459323CF1E3E98EE00FFF9D4 /* AlertView.swift */; };
 		459323D21E3E991800FFF9D4 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459323D11E3E991800FFF9D4 /* AlertView.xib */; };
+		45B7E1C81E3EAD5F005F847A /* BitCamBackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45B7E1C71E3EAD5F005F847A /* BitCamBackgroundView.xib */; };
 		90D175B40CFDDE3A8E38FD69 /* Pods_BitCam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9EAABCAFD40177393539FC /* Pods_BitCam.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		459323CD1E3E98B100FFF9D4 /* BitCamAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitCamAlertView.swift; sourceTree = "<group>"; };
 		459323CF1E3E98EE00FFF9D4 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		459323D11E3E991800FFF9D4 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		45B7E1C71E3EAD5F005F847A /* BitCamBackgroundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BitCamBackgroundView.xib; sourceTree = "<group>"; };
 		70E1EF63727F8B57A5CA3DB0 /* Pods-BitCam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitCam/Pods-BitCam.debug.xcconfig"; sourceTree = "<group>"; };
 		F5958C42102352191585DC7F /* Pods-BitCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitCam/Pods-BitCam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 				459323CF1E3E98EE00FFF9D4 /* AlertView.swift */,
 				459323D11E3E991800FFF9D4 /* AlertView.xib */,
 				459323CD1E3E98B100FFF9D4 /* BitCamAlertView.swift */,
+				45B7E1C71E3EAD5F005F847A /* BitCamBackgroundView.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -238,7 +241,7 @@
 				TargetAttributes = {
 					455C999C1E3D1EA0006749EA = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = NK6A6K3KYZ;
+						DevelopmentTeam = P83X3BG446;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -270,6 +273,7 @@
 				455C99AB1E3D1EA0006749EA /* Assets.xcassets in Resources */,
 				455C99A61E3D1EA0006749EA /* Main.storyboard in Resources */,
 				459323D21E3E991800FFF9D4 /* AlertView.xib in Resources */,
+				45B7E1C81E3EAD5F005F847A /* BitCamBackgroundView.xib in Resources */,
 				454244D71E3D38F900735B59 /* MarkBit.ttf in Resources */,
 				454244D31E3D37F000735B59 /* 8bit.ttf in Resources */,
 			);
@@ -467,7 +471,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NK6A6K3KYZ;
+				DEVELOPMENT_TEAM = P83X3BG446;
 				INFOPLIST_FILE = BitCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.BitCam;
@@ -482,7 +486,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NK6A6K3KYZ;
+				DEVELOPMENT_TEAM = P83X3BG446;
 				INFOPLIST_FILE = BitCam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohssenfathi.BitCam;

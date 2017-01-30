@@ -43,6 +43,8 @@ class CameraViewController: UIViewController {
     var contrastIndicatorRange: CGFloat = 100
     var indicatorSteps: Float = 12.0
     
+    let alertView = BitCamAlertView(title: "", message: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -58,7 +60,16 @@ class CameraViewController: UIViewController {
         updateBrightnessIndicator(with: 0.5)
     }
     
+    func alertButton(with title: String) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
+        button.tintColor = .black
+        button.titleLabel?.font = UIFont(name: "VCROSDMono", size: 20.0)
+        return button
+    }
+    
     func setup() {
+        
         mtlView.contentMode = .scaleAspectFit
         
         luminance.threshold1 = 0.27
@@ -106,6 +117,7 @@ class CameraViewController: UIViewController {
     
     @IBAction func libraryButtonPressed(_ sender: UIButton) {
      
+
         if PhotosManager.sharedManager.authorizationStatus() == .authorized  {
             performSegue(withIdentifier: "photos", sender: self)
             return
@@ -125,8 +137,7 @@ class CameraViewController: UIViewController {
     
     @IBAction func captureButtonPressed(_ sender: UIButton) {
         
-        if PhotosManager.sharedManager.authorizationStatus() != .authorized {
-            // Alert user, request authorization
+        if checkAuthorization() == false {
             return
         }
         
@@ -138,6 +149,48 @@ class CameraViewController: UIViewController {
             BitCamAlbum.sharedInstance.savePhoto(image)
         }
         
+    }
+    
+    func checkAuthorization() -> Bool {
+        
+        let status = PhotosManager.sharedManager.authorizationStatus()
+        
+        if status == .denied {
+            
+            alertView.title = "Library Access"
+            alertView.message = "BitCam needs access to your photo library. Please allow access in the Settings app."
+            alertView.buttons = [alertButton(with: "[Open Settings]")]
+            alertView.callback = { alertView, index in
+                
+                alertView.hide(animated: true, completion: {
+                    
+                    if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
+                        UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+                    }
+                })
+            }
+            
+            alertView.show(animated: true, completion: nil)
+            
+            return false
+        }
+        else if status != .authorized {
+            
+            alertView.title = "Library Access"
+            alertView.message = "BitCam needs access to your photo library. Please select \"OK\" on the following prompt."
+            alertView.buttons = [alertButton(with: "[CLOSE]")]
+            alertView.callback = { alertView, index in
+                alertView.hide(animated: true, completion: {
+                    PhotosManager.sharedManager.requestAuthorization(completion: nil)
+                })
+            }
+            
+            alertView.show(animated: true, completion: nil)
+            
+            return false
+        }
+
+        return true
     }
     
     

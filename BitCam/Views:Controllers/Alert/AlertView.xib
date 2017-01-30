@@ -8,10 +8,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkBit.ttf">
+            <string>VCROSDMono</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="BitCam" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="BdY-tn-eAQ" id="Kyc-GU-oVp"/>
+                <outlet property="buttonView" destination="GW3-Xd-tW5" id="WQ2-zK-9Mm"/>
+                <outlet property="buttonViewHeight" destination="BSi-Ga-w9A" id="vLu-Ht-W1D"/>
+                <outlet property="contentView" destination="BdY-tn-eAQ" id="tjf-qA-19q"/>
+                <outlet property="contentViewVerticalConstraint" destination="DVn-id-VzG" id="W1p-76-6q8"/>
+                <outlet property="dimView" destination="ypQ-Ra-qpM" id="Pcn-by-lAK"/>
                 <outlet property="messageLabel" destination="MYx-Y6-aiu" id="fnj-XD-6Md"/>
                 <outlet property="titleLabel" destination="DDH-Wt-CZr" id="2e8-2S-bap"/>
                 <outlet property="view" destination="iN0-l3-epB" id="QVR-6x-4YQ"/>
@@ -22,44 +31,63 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-Ra-qpM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49689210766423358" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdY-tn-eAQ">
                     <rect key="frame" x="50" y="258" width="275" height="150"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-Wt-CZr">
-                            <rect key="frame" x="8" y="8" width="259" height="20"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <rect key="frame" x="20" y="25" width="235" height="21.5"/>
+                            <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYx-Y6-aiu">
-                            <rect key="frame" x="8" y="36" width="259" height="106"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYx-Y6-aiu">
+                            <rect key="frame" x="20" y="61.5" width="235" height="44.5"/>
+                            <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GW3-Xd-tW5">
+                            <rect key="frame" x="20" y="114" width="235" height="16"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="235" id="9R3-w9-Fy3"/>
+                                <constraint firstAttribute="height" constant="16" id="BSi-Ga-w9A"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="MYx-Y6-aiu" secondAttribute="bottom" constant="8" id="9GK-Ad-U2W"/>
-                        <constraint firstItem="MYx-Y6-aiu" firstAttribute="leading" secondItem="BdY-tn-eAQ" secondAttribute="leading" constant="8" id="DaS-bv-qs1"/>
-                        <constraint firstAttribute="trailing" secondItem="DDH-Wt-CZr" secondAttribute="trailing" constant="8" id="Eez-eI-lFu"/>
+                        <constraint firstItem="GW3-Xd-tW5" firstAttribute="centerX" secondItem="BdY-tn-eAQ" secondAttribute="centerX" id="0zU-hs-R8J"/>
+                        <constraint firstItem="GW3-Xd-tW5" firstAttribute="top" secondItem="MYx-Y6-aiu" secondAttribute="bottom" constant="8" id="1h2-oA-saY"/>
+                        <constraint firstAttribute="bottom" secondItem="GW3-Xd-tW5" secondAttribute="bottom" constant="20" id="7CR-6o-0HB"/>
+                        <constraint firstItem="MYx-Y6-aiu" firstAttribute="leading" secondItem="BdY-tn-eAQ" secondAttribute="leading" constant="20" id="DaS-bv-qs1"/>
+                        <constraint firstAttribute="trailing" secondItem="DDH-Wt-CZr" secondAttribute="trailing" constant="20" id="Eez-eI-lFu"/>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="450" id="EtK-M5-u1X"/>
-                        <constraint firstItem="MYx-Y6-aiu" firstAttribute="top" secondItem="DDH-Wt-CZr" secondAttribute="bottom" constant="8" id="SlT-cT-USj"/>
-                        <constraint firstAttribute="trailing" secondItem="MYx-Y6-aiu" secondAttribute="trailing" constant="8" id="mIa-Nw-iY9"/>
-                        <constraint firstItem="DDH-Wt-CZr" firstAttribute="leading" secondItem="BdY-tn-eAQ" secondAttribute="leading" constant="8" id="oAu-cw-F11"/>
-                        <constraint firstItem="DDH-Wt-CZr" firstAttribute="top" secondItem="BdY-tn-eAQ" secondAttribute="top" constant="8" id="u66-cx-ZYr"/>
+                        <constraint firstItem="MYx-Y6-aiu" firstAttribute="top" secondItem="DDH-Wt-CZr" secondAttribute="bottom" constant="15" id="SlT-cT-USj"/>
+                        <constraint firstAttribute="trailing" secondItem="MYx-Y6-aiu" secondAttribute="trailing" constant="20" id="mIa-Nw-iY9"/>
+                        <constraint firstItem="DDH-Wt-CZr" firstAttribute="leading" secondItem="BdY-tn-eAQ" secondAttribute="leading" constant="20" id="oAu-cw-F11"/>
+                        <constraint firstItem="DDH-Wt-CZr" firstAttribute="top" secondItem="BdY-tn-eAQ" secondAttribute="top" constant="25" id="u66-cx-ZYr"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="y61-9n-gPE"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ypQ-Ra-qpM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6cd-Do-Qgl"/>
+                <constraint firstAttribute="bottom" secondItem="ypQ-Ra-qpM" secondAttribute="bottom" id="A1Q-Ky-Feq"/>
                 <constraint firstItem="BdY-tn-eAQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DVn-id-VzG"/>
                 <constraint firstItem="BdY-tn-eAQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Kap-6S-ttt"/>
                 <constraint firstItem="BdY-tn-eAQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="MqY-iI-Blh"/>
+                <constraint firstAttribute="trailing" secondItem="ypQ-Ra-qpM" secondAttribute="trailing" id="c0T-oa-xCB"/>
+                <constraint firstItem="ypQ-Ra-qpM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="crr-eY-lBu"/>
                 <constraint firstAttribute="trailing" secondItem="BdY-tn-eAQ" secondAttribute="trailing" constant="50" id="wmL-Ew-Rms"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="50.5" y="54.5"/>
         </view>
     </objects>
 </document>

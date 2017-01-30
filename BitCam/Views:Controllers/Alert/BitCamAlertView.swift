@@ -10,6 +10,13 @@ import UIKit
 
 class BitCamAlertView: AlertView {
 
+    @IBOutlet var customBackgroundView: UIView!
 
+    override init(title: String?, message: String?) {
+        super.init(title: title, message: message)
+        
+        Bundle.main.loadNibNamed("BitCamBackgroundView", owner: self, options: nil)
+        backgroundView = customBackgroundView
+    }
     
 }

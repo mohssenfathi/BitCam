@@ -6,7 +6,7 @@
 	<string>BitCam requires access to save photos to the Camera Roll</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>8bit.ttf</string>
+		<string>8bitemul8r</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
