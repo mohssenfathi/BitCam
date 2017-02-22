@@ -15,19 +15,18 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var mtlView: MTLView!
     @IBOutlet weak var brightnessLabel: UILabel!
     @IBOutlet weak var captureButton: UIButton!
+    @IBOutlet weak var flipCameraButton: UIButton!
     
     @IBOutlet weak var contrastView: UIView!
     @IBOutlet weak var brightnessView: UIView!
-    @IBOutlet weak var contrastIndicator: UIImageView!
-    @IBOutlet weak var brightnessIndicator: UIImageView!
     
     @IBOutlet weak var contrastUpButton: UIButton!
     @IBOutlet weak var contrastDownButton: UIButton!
     @IBOutlet weak var brightnessUpButton: UIButton!
     @IBOutlet weak var brightnessDownButton: UIButton!
     
-    @IBOutlet weak var brightnessIndicatorConstraint: NSLayoutConstraint!
-    @IBOutlet weak var contrastIndicatorConstraint: NSLayoutConstraint!
+    @IBOutlet weak var brightnessSlider: UISlider!
+    @IBOutlet weak var contrastSlider: UISlider!
     
     let camera = MTLCamera()
     let filterGroup = MTLFilterGroup()
@@ -39,11 +38,11 @@ class CameraViewController: UIViewController {
     let contrast = Contrast()
     let crop = Crop()
     
-    var brightnessIndicatorRange: CGFloat = 100
-    var contrastIndicatorRange: CGFloat = 100
     var indicatorSteps: Float = 12.0
     
     let alertView = BitCamAlertView(title: "", message: "")
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +51,6 @@ class CameraViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        brightnessIndicatorRange = brightnessDownButton.frame.minY - brightnessUpButton.frame.maxY - 20.0
-        contrastIndicatorRange = contrastUpButton.frame.minX - contrastDownButton.frame.maxX + 20
-        
         updateContrastIndicator(with: 0.5)
         updateBrightnessIndicator(with: 0.5)
     }
@@ -89,11 +84,22 @@ class CameraViewController: UIViewController {
         filterGroup += brightness
         filterGroup += contrast
         
+        brightnessSlider.setThumbImage(#imageLiteral(resourceName: "Slider-Pointer"), for: UIControlState.normal)
+        brightnessSlider.setMinimumTrackImage(UIImage(), for: UIControlState.normal)
+        brightnessSlider.setMaximumTrackImage(UIImage(), for: UIControlState.normal)
+        contrastSlider.setThumbImage(#imageLiteral(resourceName: "Slider-Pointer"), for: UIControlState.normal)
+        contrastSlider.setMinimumTrackImage(UIImage(), for: UIControlState.normal)
+        contrastSlider.setMaximumTrackImage(UIImage(), for: UIControlState.normal)
+        
         brightnessLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2.0)
-        brightnessIndicator.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2.0)
+        brightnessSlider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2.0)
     }
     
 //  MARK: - Actions
+    
+    @IBAction func flipCameraButtonPressed(_ sender: UIButton) {
+        camera.flip()
+    }
     
     @IBAction func contrastDownButtonPressed(_ sender: UIButton) {
         contrast.contrast = max(0.3, contrast.contrast - 0.6/indicatorSteps)
@@ -116,8 +122,7 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func libraryButtonPressed(_ sender: UIButton) {
-     
-
+    
         if PhotosManager.sharedManager.authorizationStatus() == .authorized  {
             performSegue(withIdentifier: "photos", sender: self)
             return
@@ -129,9 +134,20 @@ class CameraViewController: UIViewController {
                 self.performSegue(withIdentifier: "photos", sender: self)
             }
             else {
-                // Yell at user
+                DispatchQueue.main.async {
+                    self.alertView.title = "Library Access"
+                    self.alertView.message = "BitCam needs access to your photo library. Please allow access in the Settings app."
+                    self.alertView.buttons = [self.alertButton(with: "[Open Settings]")]
+                    self.alertView.callback = { alertView, index in
+                        alertView.hide(animated: true, completion: {
+                            if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
+                                UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+                            }
+                        })
+                    }
+                    self.alertView.show(animated: true, completion: nil)
+                }
             }
-            
         }
     }
     
@@ -199,17 +215,11 @@ class CameraViewController: UIViewController {
 //  MARK: - Slider Indicators
 
     func updateBrightnessIndicator(with percentage: CGFloat) {
-        brightnessIndicatorConstraint.constant = brightnessIndicatorRange * percentage
+        brightnessSlider.setValue(Float(percentage), animated: false)
     }
     
     func updateContrastIndicator(with percentage: CGFloat) {
-        contrastIndicatorConstraint.constant = contrastIndicatorRange * percentage + 4 // Gross, I know
-    }
-    
-    func animate(duration: CGFloat, _ animation: @escaping (() -> ())) {
-        UIView.animate(withDuration: TimeInterval(duration), delay: 0.0, options: .beginFromCurrentState, animations: {
-            animation()
-        }, completion: nil)
+        contrastSlider.setValue(Float(percentage), animated: false)
     }
     
 // MARK: - Animation
